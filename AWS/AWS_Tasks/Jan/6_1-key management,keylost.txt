@@ -1,0 +1,44 @@
+TASK 0:
+DELETE OUTBOUND AND CONNECT INSTANCE BY PUTTY OR AWS TERMINAL
+
+RESULT- YES WE CAN CONNECT INSTANCE EVEN WE DELETED IT.
+
+COMPLETED
+-----------------------------------------------------
+
+TASK1:
+CREATE USER AND LOGIN USER WITHOUT PASSWORD
+
+RESULT - NO WE WON'T LOGIN WITHOUT PASSWORD UNLESS WE USE SUDO PREVILEDGES.
+
+COMPLETED
+------------------------------------------------------
+
+TASK2:
+GENERATE SSH-GEN KEY TO A NEW USER FROM HIS/HER LOGIN TERMINAL.
+
+COMPELETED
+------------------------------------------------------
+
+TASK3(IMPORTANT):
+CREATE A FILE CALLED AUTHORIZED_KEYS LIKE DEFAULT EC2-USER OR ROOT USER AND LOGIN AS NEW USER WITH PRIVATE KEY
+
+RESULT: INTERESTING FACT, WE CAN CONNECT  INSTANCE WITH MULTIPLE KEY BY APPENDING PUBLIC KEY ON AUTHORIZED_KEYS IN.SSH FOLDER.
+
+COMPELETED
+--------------------------------------------------
+
+TASK4:
+
+STEP 0) REFER THIS PAGE : https://computingforgeeks.com/how-to-solve-xfs-filesystem-has-duplicate-uuid-error/
+
+cause we got error at wrong type fs error while mount.because of same UUID 
+
+
+DETACH ROOT FROM SERVER1 AND ATTACH TO SERVER2.AND GENERATE KEY.
+
+pre-requests: make sure instance is to be stopped and detach the volume
+
+COMPLETED SUCCESSFULLY :)
+--------------------------------------- 
+

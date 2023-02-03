@@ -1,0 +1,49 @@
+THERE ARE TWO TYPES OF ROOT DEVICE TYPE (EBS AND INSTANCE STORE)
+
+EC2 INSTANCE STORE VS EBS:
+
+EC2 INSTANCE STORE(SSD,HDD,NO SNAPSHOT):
+
+1. Local to instance
+
+2. Non-presistent data store
+
+3. Data not replicated (by default)
+
+4. No Snapshot Support
+
+5. SSD or HDD
+
+cons:
+If we stop the instance , the data will deleted.
+
+USE CASES:
+HIGH LATENCY FOR INITIAL STAGE,BUT MOST EBS IS USED
+
+TERMINILOGY:
+Ephermeral - Which storage is attached to the instance by default 
+
+
+
+------------------------
+ELASTIC BLOCK STORE(Gp2,io1,st1,sc1)
+
+1. Persistent block storage volumes 99.999% availability
+
+2. Automatically replicated within its Azs
+
+3. Point-in-time snapshot  support
+
+4. Modify volume type as needs change SSD or HDD
+
+5. Auto recovery.
+
+TERMINILOGY:
+
+Non Ephermeral - Storage is not attached to the instance by default ,but located in somewhere like ebs
+
+-------------------------------------------------------------
+
+HOW CAN WE SEE THE INSTANCE STORE VOLUME?
+ GO -> Community ami -> Root Device type.
+

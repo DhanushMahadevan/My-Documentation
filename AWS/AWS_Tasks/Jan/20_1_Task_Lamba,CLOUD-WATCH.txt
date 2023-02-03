@@ -1,0 +1,26 @@
+TASK 1:
+START AND STOP AND TERMINATE INSTANCES BY LAMBA FUNCTION
+
+PRE-REQUESTS:
+
+1. CREATE A ROLE FOR LAMBA WITH EC2 ACCESS
+2. CHOOSE PYTHON 3.8
+3. EVERYTIME CHANGES IN CODE, WE MUST DEPLOY AND AFTER WE SHOULD TEST IT
+
+
+COMPLETED..
+
+--------------------------------
+
+TASK 2:
+SETTING UP ALARM BASED ON EC2 CPU UTILIZATION
+
+COMPELETED
+----------------------------------------------
+
+TASK 3:
+
+Monitoring memory and Disk Metrics in EC2 by custom metrics thourgh scripts(Day -to-day life task)
+
+REFERENCES: 7TH VIDEO TAMIL_CLOUD
+------------------------------------------------------------

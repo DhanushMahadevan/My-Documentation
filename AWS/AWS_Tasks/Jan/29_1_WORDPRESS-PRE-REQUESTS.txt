@@ -1,0 +1,11 @@
+WORDPRESS PRE-REQUESTS:
+
+REFERENCE MANDATORY******************* LINK:hevodata.com/learn/wordpress-high-availability/#w5
+
+1. Make sure create an ebs application . determine how they works like what are all the components are created like S3(code)ASG,ELB. And delete the s3 after deleting the ebs.Cause other ASG and elb is deleted along with ebs (NOte: It doesn't create EIP's)
+
+2. CHECK THE COMPATIABILITY OF THE WORDPRESS FOR MYSQL AND PHP
+
+3. MAKE SURE RESTART THE HTTPD SERVICE AFTER CONFIGURED IN DATABASES.(MAJOR PROBLEM OCCURED IN THIS STEP IS NOT DONE.********)
+
+4. if we want default wordpress page by apache , go through the aws doc

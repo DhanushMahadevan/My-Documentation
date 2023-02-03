@@ -1,0 +1,2 @@
+1. AWS USERDATA AND SEE THE BASHRC - if yes nothing to change in notes . otherwise if no do change in our notes
+ RESULT : NO SO I CHANGE IN MY NOTES.

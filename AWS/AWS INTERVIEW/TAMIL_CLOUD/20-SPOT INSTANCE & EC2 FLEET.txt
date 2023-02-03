@@ -1,0 +1,13 @@
+SPOT INSTANCES:
+
+When Launch our instance, We will see the Purchasing option of Request Spot instances , Then we can bid the max price of the instance
+
+WORKING MECHANISM:
+
+SCENARIO:
+
+If we are using spot instance, When our instance is needed to someone else , they will set it as higher cost than us. Then AWS send an notification before leaving our instance in 15 mins.After that we will backuping our data.
+
+EC2 FLEET - USING ON-DEMAND,RI AND SPOT INSTANCE CONCURRENTLY.
+
+THIS OPTION LOCATED IN SPOT REQUEST IN EC2 MANAGEMENT CONSOLE

@@ -1,0 +1,45 @@
+BARE METAL (it is used on all the purpose, cause it has the highest configure of vCPU,memory)VS DEDICATED HOSTS:
+
+
+TYPES OF VIRTUALIZATION:
+
+XEN HYPERVISOR -HVM - MANAGED BY AWS
+AWS NITRO SYSTEM - AWS NITRO (AWS OWNED HYPERVISOR) - MANAGED BY AWS
+BARE METAL - WE CAN EITHER USE IT AS VIRTUALIZATION OR NON-VIRUALAZTION, CAUSE WE CAN MANAGE THE VIRUTALAZATION 
+
+While launching our instance, There is an option called Tenancy .It has three choices like
+
+1. Shared - Run a Shared hardware Instance or Shared model
+
+Scene:
+	If we restart or stop the instance, that instance starts in another. cause multiple clients are their app in theos.(like virtualization concept) , AND IT IS NOT CHARGABLE WHEN IT IS STOP.
+
+2. Dedicated Hosts - Run a dedicated Instance
+
+Scene:
+	If we restart or stop the instance, that instance starts in another .but sharing model. pays in per hour.IT IS NOT CHARGABLE WHEN IT IS STOP
+
+3. Dedicated Host - launch this instance on a dedicated host or for all dedicated hosts configured instances.
+
+Scene:
+	If we restart or stop the instance, A server or rack runs in same instance. So we should pay for that WHEN IT IS STOPPED
+
+NOTE BASICS FOR INTERVIEW AND ALSO VIRTUALZATION CONCEPT:
+
+BY DEFAULT. SINCE VIRTUALIZATION OF HYPERVISOR OR NEW VERSION NITRO SYSTEM(AWS OWNED HYPERVISOR) ARE MANAGED BY AWS IN EC2 INSTANCE . BUT IN BARE METAL INSTANCE ARE NON-VIRTUALAZATION CONCEPT . SO WE CAN USE BARE-METAL AS EITHER VIRUTAULIZATION OF OUR OWN VM WARE SOFTWARE  OR NON-VIRUTALIZAION CONCEPT. 
+
+
+
+DEDICATED HOSTS:(WHENEVER WE STOP OR RESTART THE INSTANCE,IT WILL STARTS IN SAME DEDICATED HOSTS)
+
+1.VIRULAZATION CONCEPT
+
+2. AWS MANAGES THE VIRTUALIZATION LAYER
+
+3.IT IS CHARGABLE STATE IS STOPPED
+
+BARE METAL:(WHEN WE STOP OR RESTART THE INSTANCE, IT WILL START IN AVAIL OF ANOTHER BARE METAL INSTANCE)
+
+1.NON -VIRTULAZATION CONCEPT
+2. WE CAN MANAGE THE VIRUTALIZATION LAYER
+3. IF WE STOP , NO CHARGES

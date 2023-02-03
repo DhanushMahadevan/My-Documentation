@@ -1,0 +1,12 @@
+NANO EDITOR:
+
+TO SEARCH  - CTRL+ W
+TO REPLACE - CTRL + /
+
+password auth
+
+-nano /etc/sshd/ssh_config
+-Go the pass word by doing search shorcut
+-Enter yes 
+- Service sshd restart
+

@@ -1,0 +1,37 @@
+----------------------------PROCESS AND FILE SYSTEM:--------------------------------------------
+
+CPU PROCESS:
+1. ps -ef or ps -aux along with grep is mostly used. like ps -ef | grep -i 'splunk'
+2. free -m(mibibyte) or k(kibibyte)- memory utilization like free and used.
+3. sar -overall memory utilization
+4. top(90%) - FOR CPU shows like windows task sorted by cpu utilization
+5. htop 
+-----------------------------------------------------------------------------------------------
+
+FILE SYSTEM and DISK USAGE:
+1. df -h(megabyte) - shows file system along with this size.
+
+TROBULESHOOT SKILLS NEED FOR COMPANY:
+SCEANRIO:(WHEN A DIR OR FILE USING HIGH MEMORY or FULL THE FILE/Dir )
+2. du -sk(kilobyte) or h(mega) or g(giga) filename
+3. du -sk * -all the current dir
+4. du -sk * | sort -nr(reversely numberic sort)
+NOTE: SORT IN NATURE SORTS THE ALPHABETICAL ORDER . BUT THE BELOW nr shows reversely numberic 
+5. du -sk * | sort -nr | head -n 20 - Shows first 20 lines with more memory occupied current dir.
+
+---------------------------------------------------------------
+
+FILE COMPRESSIONS:
+
+zip - lower level compression(for files)
+gzip-higher level compression(for files)
+tar - higher level compression(for dir)
+
+zip or gzip(same syntax):
+ TO ZIP : zip filename.zip(output) filename(input)
+ TO UNZIP: unzip zipfile
+
+
+tar:
+TO TAR: tar -cvf or -czf compressed.tar(output) input-file
+TO UNTAR: untar -xvf or xzf compressed.tar

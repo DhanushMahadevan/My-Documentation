@@ -1,0 +1,14 @@
+TASK 1:
+
+45 VIDEO IN TAMIL CLOUD
+PENDING:::::::::::::::::::::::::::::::
+---------------------------------------------
+
+TASK 2:
+ ++++++++++++++VPC TRANSIT GATEWAY CROSS REGIONS+++++++++
+
+ANSWER: We can't connect two vpc directly in cross regions, So we can achieve only by vpc peering . cause we can attach multiple -vpc in Transit gateway,But In vpc peering we can't.So That takes the advantage of Transit gateway. Therefore, When we play as CROSS region with multiple vpc, we should have configured Vpc peering connection.
+
+PENDING::::::::::::::::::::::::::::::::::::::::
+
+-------------------------------------------------------------

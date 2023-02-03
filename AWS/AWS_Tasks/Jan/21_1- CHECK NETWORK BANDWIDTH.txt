@@ -1,0 +1,19 @@
+CHECKING  EC2 NETWORK PERFORMANCE USING IPERF TOOL:
+
+STEPS(Same Az's):
+
+1. Launching two or more instances like (t2 ,t3 etc) what we are going to test.
+
+2. install, perf3 tool to that instances
+
+3. iperf3 -s (either press enter or enter a flag like -p (any port))
+
+
+NOTE: (WHEN WE PRESSING ENTER IT RUNS ON PORT 5201)
+
+5. iperf3 -c private-ip-of-a server -p portnumber
+
+----------------------------------------------------------------------
+DISTINCT AZ'S or CROSS AZ's
+
+cmd: iperf3 -c private-ip-server -p portnumber -P(parallel connection like no of instances) 5 -i(interval) 60 -t(seconds) 5 

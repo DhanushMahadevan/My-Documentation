@@ -1,0 +1,38 @@
+TASK1:
+DOWNLOAD AWS CLI AND CREATE IAM USER AND EC2 FULL ACCESS
+
+COMPLETED
+*****************************************************************
+
+TASK2(Incremental backup):
+snapshot 10 and add 5 and take snapshot 15 again.see how the snapshot is taken like 5 or 15 
+
+COMPLETED
+
+ANSWER: WE CAN'T SEE  IN THIS SNAPSHOT OR VOLUME PAGE. BUT IT WILL BACKING UP IN S3 BACKGROUNDLY
+
+*********************************************************
+
+TASK 3:
+
+SET BILLING ALARM BY CLOUDWATCH SNS
+
+COMPELETED...............
+ANSWER :
+
+WRONG PREDICTION: In Sumathi info tech has been recorded in older version of aws management console, so it shows billing option in cloud watch. In New version, Billing dashboard -> billing preference.
+
+RIGHT PREDICTION:
+
+VIRGINA REGION HAS THE OPTION OF BILLING IN CLOUDWATCH.
+
+******************************************************
+
+TASK 4:(IF I CAN , DO CLOUDWATCH ALARM CPU 70 THE SCALEUP[SIMPLE/STEP	 SCALING]{PENDING..................
+})
+
+ELB-ASG(TARGET TRACKING SCALING)-EC2-RDS-WORDPRESS 
+
+CHECK, DOES  SCALED OUT INSTANCES ADDED IN TARGET GROUPS AUTOMATICALLY WHEN WE STRESSED THE INSTANCES
+
+COMPLETED - TASK 4 ONLY WITHOUT CLOUDWATCH ALARM.THAT'S WHY I TEXTED ABOVE AS PENDING

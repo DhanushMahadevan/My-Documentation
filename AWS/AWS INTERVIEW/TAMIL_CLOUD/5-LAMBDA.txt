@@ -1,0 +1,56 @@
+LAMBDA:
+
+DEFINITION:
+	It is powerful serverless Architecture,	Although we say it is serverless. But servers are really exist in somehwe in Az's .Those servers are managed by aws.
+
+FEATURES:
+	1. NO Infra to manage that is focus on business logic.
+	2. High performance at any scale, Cost-effective and efficient
+	3. Just bring our own code , lamba handles everything else
+
+NOTE:
+MAJOR SERVERS ARE t2.micro in lamba 
+
+---------------------------------------------------------------------------------------------------
+
+COST OF LAMBA:
+	It is based on trigger-based code execution how much amount of memory is needed to run for that code.
+
+--------------------------------------------------------------------------------------------------------------
+
+USE CASE:
+
+* IMAGE THUMBNAIL- 
+1. S3 BUCKET PHOTOGRAPH - IT IS TRIGGERED BY LAMBA.
+2. RESIZING CODE TO GENERATE WEB,MOBILE AND TABLET SIZES , AFTER THAT DEVELOPER USES THAT CODE AND ENHANCETHAT CODE.
+
+* BACKING UP-
+1. CLOUDWATCH SCHEDULED EVENTS
+2. LAMBA FUNCTIONS - DATE WISE BACKUP AND UNWANTED DATE ARE DELETED WHICH IS ACHIEVED BY LAMBA FUNCTIONS OF SOME OF THE PROGRAMMING LANGUAGE
+
+* ALEXA
+
+* START AND STOP EC2 INSTANCES TRIGGERED BY CLOUDWATCH EVENTS -
+1. SCHEDULE START AND STOP INSTANCES like Keep running only Monday-Friday 9AM - 6PM
+2. AWS IAM Role- LAMBA - BY PYTHON CODE -{Hands on this recorded by Stephan sibu in my local AND Tamil_cloud video}
+
+--------------------------------------------------------------------------------------------------------
+In cloud Watch :
+
+Types of Rule:(Event pattern and Schedule pattern)
+
+1. Event pattern:
+ 	USE CASE: 
+		1. Changes in Security Groups
+		2. Start/stop/restart instances like all action
+2. Schedule pattern:
+	USE CASE:
+		1. CRON JOBS
+
+-----------------------------------------------------------------------------------------------------------
+
+WE SHOULD LOOK AT BASIC SETTING: LIKE MEMORY MIB(MAX:3GB), TIMEOUT{CODE EXECUTION TIMING} (MAX:15 MINS )
+BUT MEMORY MIB(128MB) AND TIMEOUT IS 5 MINS ARE ENOUGH FOR CODE IN START AND STOP INSTANCE CODE IN PYTHON
+
+		 
+

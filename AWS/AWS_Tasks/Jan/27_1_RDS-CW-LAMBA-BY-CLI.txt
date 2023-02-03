@@ -1,0 +1,43 @@
+CLI OF RDS START AND STOP AND LOG IN COULDWATCH through lamba
+
+STEPS:
+
+1. IN Aws Policy Generator , Amazon rds(describe,start and stop)n and arn - *, Cloudwatch(craete logstream,createlog group,)
+
+2.Copy and paste into IAM policy
+
+3. name it as lamba -rds-cw.
+
+4. After that create role for lambda
+
+5. create role and click lambda
+
+6. choose existing lambda-rds-cw.
+
+7. Create lamba function
+
+8. choose python 3.7
+
+9. PUT CODE INTO THE FUNCTION.
+
+10. Choose environement variable Key as Something value as RDS Name.
+
+11. copy the arn of lambda.
+
+12. Add inline policy of that role
+
+13.choose lambda service
+
+14. choose  Read Action as GetFunctionConfiguration
+
+15. Choose Resource -> Specified resource and paste the arn
+
+16. Name it as lamba inline access
+
+17. Add user and nameit lamba user and programmatic access and add permission as lamba full access.
+
+18. enter cmd as aws lambda invoke --function-name rds-stop output
+
+if we have multiple profile
+
+we can enter aws lambda invoke --fucntion-name rds-stop output --profile (profilename).

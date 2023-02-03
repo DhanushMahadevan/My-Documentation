@@ -1,0 +1,36 @@
+NOT ENABLED ENA WHEN WE ARE SWITCHING TO NEW INSTANCE T2 to T3 / C4 to C5 / M4 to M5:
+
+STEPS:
+
+1) Install AWS Cli with Ec2 permission Profile
+
+2) Take one AMI -Prod must do it
+
+3) Install AWS-Linux Kernal on the EC2 instance OS-level
+     *********************************************************
+    sudo apt-get update && sudo apt-get upgrade -y linux-aws
+
+4)  Enable ENA on Instance Level
+      *******************************
+    Stop the EC2 instance and Goto AWS Cli Ec2 access profile
+
+   aws ec2 modify-instance-attribute --instance-id instance_id --ena-support
+
+5) AWS Console 
+    That EC2 Instance settings- Change instance type select T3/M5/C5-start
+   
+    AWS Cli 
+    aws ec2 stop-instances –instance-ids i-6370
+    aws ec2 modify-instance-attribute –instance-id i-6370xxxxxxx –instance-type 
+    “{\”Value\”: \”t3.micro\”}”
+
+    aws ec2 describe-instances
+
+Note: T3 upgrade time check T2/T3 unlimited cpu option select or not
+  
+   ******************************************
+T2 to T3 Instance Migrate Benefits |  AWS Tamil
+
+
+
+

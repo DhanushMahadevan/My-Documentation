@@ -1,0 +1,164 @@
+git remote add alias <url>
+git push alias master
+
+INTERVIEW: 
+
+1. WORKFLOW AND STRATEGIES OF THE GIT.
+
+2.************************************** DAY TO DAY LIFE TASK ISSUE:************** Solve Merge conflict using git merge conflict tools . but most of the dev using vscode,sublime,atom solved by visually, In interview, they will asking merge conflict using git tools.
+
+3.GIT  CMDS.
+
+
+WHAT IS MASTER:
+
+BASIC:
+When we do execute a first commit cmd, it will create a master branch(like tree). Then we made some changes in code and second commit. it also under the master branch
+
+NOTE:
+IN GIT, We create multiple branches, then we will start working in the branches.
+
+1. CHECKING BRANCHING IN OUR DIR OR LOCAL REPO:
+
+git branch - if it returns the nothing. it means it don't have created any branch.Cause we're doing first commit, the branch will creates
+
+INTERVIEW QUESTION:
+
+What is HEAD:
+It is presented in last committed of our git regardless many branches are there, 
+
+e.g if we commit in first time , it is head. if we do second commit, it is head. then first commit is not a head and so on.
+
+-----------------------------------
+
+EXECUTING ADD AND COMMIT in one cmd:
+
+PRE-REQUESTS:
+ IN BELOW CMD IS WORK ON AFTER THE FIRST COMMIT. IF WE DO IN FIRST COMMIT . IT WILL ASKING FOR FIRST ADD AND COMMIT IN TWO STEPS.
+
+git commit -a -m or -am "message"
+
+-----------------------------------
+BASIC **************please take a look :
+WE DON'T DO  CHANGES LIKE ADDING FEATURE IN MASTER BRANCH.Cause the Testing team or QUALITY ASSURANCE TEAM tested our newly feature added code from feature branch. When they
+approved our new feature from testing team. Finally we commit to the master branch(merge cmd plays).
+ Unless disapprove our new feauture we work.SO WE HAVE TO CREATE A FEATURE BRANCH NAME IT AS WE DESIRED and work on it.
+
+Virtuality of file:
+
+Which means we can keep a file in virtual of many  other branches.
+
+e.g if we have changed in feature branch file, and do commit . it will no affect in the master branch
+
+ADD A NEW BRANCH:
+
+WHY SHOULD I CREATE NEW BRANCH?
+
+ANSWER: I will handle something called workorder-it means add a feature or solve the bug in the existing code.(ticketing tools like servicenow,jira)
+
+CMD: git branch - (it will return branch names)
+
+git branch branch-name(like dev,test) - it will add branch name.
+
+AND THEN,
+
+git branch -it shows branch names with recent added branch also.
+
+NOTE: * -It's denoted current branch
+---------------------------------
+
+SWITHCHING B/W BRANCHES:
+
+CMD: git checkout branch-name
+
+NOW THEN, git branch - That * it pointed to the current switched branch 
+
+
+do ls cmd- we can see the same copy of the master branch
+
+
+if we do commit , it willcommit only dev(feature branch)
+
+and do git log - it show the log info of the HEAD-> DEV,
+
+
+----------------------------------
+MERGE CMD :
+
+ADDING THE FEATURE BRANCH TO MASTER BRANCH
+
+Types of merge:
+1. SMOOTH MERGE(witout overwritten)
+2. MERGE CONFLICT(overwritten)
+
+NOTE: BUT BOTH TYPES ARE USED IN SAME CMD AS: git merge branch-name
+
+ Before merging, we should do 3 operations:
+
+ i) check the branch is master (git branch) 
+ ii) git log - check the previous commits in master for merging new commits to the master.
+ iii) git merge dev
+
+1. SMOOTH MERGE:
+ 
+git log - commmit -id(HEAD-> MASTER, SBI/DEV,DEV)
+
+WHERE, 
+HEAD -> MASTER - IN LOCAL REPO , EVERYTHING IS COMMITED IN MASTER BRANCH
+
+SBI/DEV - IN REMOTE IN FEATURE BRANCH
+
+DEV - IN LOCAL REPO , EVERYTHING IS COMMITED IN FEATURE BRANCH
+
+check the video @57:13. IF ABOVE WHERE IS NOT UNDERSTANDABLE.
+
+Finally 
+git push docs master- the merged commit are pushed to remote
+
+
+
+git log - commmit -id(HEAD-> MASTER,SBI/MASTER ,SBI/DEV,DEV) - WHICH BOTH FEATURE AND MASTER BRANCH IS SUCCCESSFULLY PUSHED IN REMOTE.
+
+-----------------------------------
+2.MERGE CONFLICT
+
+i) In Master , create a file and add a first line
+
+ii) Add the second line and commit it.
+
+iii) Create a new feature branch
+
+iv) create third line in feature branch and commit it.
+
+v) do merge - we will the merge conflict through an error
+
+vi)************************************** DAY TO DAY LIFE TASK ISSUE:************** Using Merge tool(vimdiff) , to solve the merge conflict (specified top page of Interview) - gothrough github docs for git merge tool
+
+vii) git config --global merge.tool vimdiff && - mergetool config
+
+	git config --global merge.conflictstyle diff3 && - it shows 3 info like local(master),base(previous commit),remote(merging branch from another branch) spilt in output screen
+
+	git config --global mergetool.prompt false - To avoid asking for starting the vimdiff
+ 
+viii) Execute git mergetool and  Moving cursor to the four screen - ctrl + shift + w + w
+
+ix) editing the file:
+
+enter esc for command mode
+
+:diffg RE # get from REMOTE
+:diffg BA # get from BASE
+:diffg LO # get from  LOCAL
+
+And type one of the above cmd ,SHIFT+Enter to change
+
+x) Quitting from all editors - :wqa!
+
+xi) do ls in terminal - it show 2 files like filename filename.orig.
+
+NOTE:
+
+IF we do git status -s -> it is automatically added in staging area implicitly .Cause we have saved in git mergetool editor.
+
+xi) So git commit -m "Final commit"
+----------------------------------- 

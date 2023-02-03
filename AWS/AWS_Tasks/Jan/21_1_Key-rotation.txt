@@ -1,0 +1,48 @@
+TASK 1:
+PEM KEY ROTATION OR KEY RECOVERY:
+
+BASIC :
+ As a Cloud Eng, They will change(rotate) their pem key per 2 or 3 months for security purpose.
+
+ROTATING KEY BY SSM:
+	Quest arising why do we go for ssm, Cause we don't login every single instance to rotate our key, So we just simply done by SSM.
+
+STEPS:
+1. SPIN UP A INSTANCE
+
+2. ROLE FOR EC2FORSSMROLE
+
+3. UPDATE THAT ROLE TO THE INSTANCE
+
+4. INSTALL SSM AGENT TO OUR INSTANCE (GOOGLE IT THE SSM AGENT PRESENTED IN AWS OFFICAL DOCS).
+
+5. CHECK STATUS OF THE SSM-AGENT BY A CMD: systemctl status amazon-ssm-agent.
+
+6. go to the SSM page in aws site.
+
+7. To see the managed instance option, Check our instance is display or not.
+
+8. do cmd: ssh-keygen 
+
+9. Copy the public key 
+
+10. Pass the below script to the run cmd option in SSM page.
+
+#To add public key in run command
+
+#!/bin/bash
+/bin/echo -e "Public-key-content" > /home/ubuntu/.ssh/authorized_keys
+
+11. Choose AWS-RunShellScript option
+
+12. In Command parameters - paste the  above (10th step  script content)
+
+13. In Targets , Specify Instance tags or  choose the instances
+
+SCENARIO :
+ IN SOME CASES, OUR COMPANY USES SOME TAG FOR WHOLE INSTANCE 
+eg: 500 instance have same tag name, it will reflect that 500 instances 
+
+14. Click Run button or go through what options are there.
+
+15. Finally check our old private key is connected or not and login as newly created private key

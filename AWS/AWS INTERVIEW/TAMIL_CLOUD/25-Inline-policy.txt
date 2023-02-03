@@ -1,0 +1,7 @@
+INLINE POLICY:
+
+This is only for specific user for additional policy . So it doesn't showed in policies.
+
+SCENARIO:
+
+If we want to add some policy to the specifiy user in a group. we will go for inline policy

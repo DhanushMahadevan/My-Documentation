@@ -1,0 +1,11 @@
+Doubt tasks:
+create 2 instances in distinct subnets and sg .make go to the private instance from public instance and do ping .does this reachable or not?
+
+ANSWER:
+
+IT DOESN'T WORK. THE ONLY WAY IGW OR NAT
+
+
+
+cisco skills
+python session

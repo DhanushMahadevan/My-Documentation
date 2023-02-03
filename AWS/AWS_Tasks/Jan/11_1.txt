@@ -1,0 +1,15 @@
+TASK 1(NACL -OUTBOUND:(CUSTOM TCP - 1024-65535)):
+Login an instance and check how our instances port is listing by dyamically...
+cmd:
+netstat -a | grep -i ssh
+ANSWER: It'll show dynamic when we execute the above cmd sequencely like first time executed cmd shows a port and another time executed that cmd show another port
+
+NOTE:
+THE ABOVE TASK IS BASED ON NACL , CAUSE IT IS SUBNET-LEVEL(it is nothing but the sub-Networks) PROTECTION  . 
+
+BASIC FROM NEWTORKING:
+IN ANY SYSTEM IS CONNECTED WITH DYNAMIC PORT(1024-65535)
+
+COMPELETED---------------------
+------------------------------
+

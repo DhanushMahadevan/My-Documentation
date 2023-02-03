@@ -1,0 +1,64 @@
+1.ifconfig (Interface config):
+sudo apt install net-tools
+-----------------------------
+which we can eth0)
+*ifconfig -s - which show what are the packets are going up and down 
+where,
+RX - received traffic packets or incoming traffic
+TX - transmitted traffic packets or  outgoing traffic 
+ 
+*ifconfig -v(verbose) (same as ifconfig)
+---------------------------------------------
+2.ping (packet internet graper)
+-------------------------------
+ping -c 5 -i 3 ip_addr - which 3 denotes time interval b/w ping each packet
+pinf -c 5 -s 200 ip_addr -packet 200 size
+-------------------------------
+3.traceroute( for troubleshooting purpose)
+traceroute is better than mtr
+apt install traceroute
+------------------------
+How the packet getting routed.how the packtes are routed to reach the destination by routers.
+
+cases:
+if so may firwalls are there, we can identify when will our packet get dropped
+-----------------------------------------
+4.mtr
+-apt install mtr
+
+
+5. pathping
+
+6. telnet
+--------------
+telphone network - To find a particular port is open or closed
+every app have specific port.  
+ssh -22
+rdp - 3389
+dns -53
+http -80
+httpd -443
+smb -445
+ 
+Note:
+we will check this cmd in aws as well as linux terminal syntax as  telnet ip_addr port_num
+but destination machine must be in web service started.
+
+if any fails that either be firewall or or internet speed(packets are dropped)
+--------------------------
+
+7.netstat -a 
+- which we can see the all the listening ports.
+
+* netstat -a | grep -i LISTENING 
+
+IMPORTANT TO REMEMBER WHILE PERFROMING WEB DEPLOY:
+------------------------------
+watch -n 1 netstat -a | grep -i LISTENING
+  - every one second we will see the status of listening ports
+
+- Do duplicate the session
+
+- In duplicate session,To install apache or any server pack and start the service
+
+ 

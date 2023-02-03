@@ -1,0 +1,25 @@
+HOW TO AUTOMATICALLY REVERT RECEIVE NOTIFICATIONS ABOUT CHANGES TO YOUR VPC SG:
+
+SCENARIO:
+	If something changing our sg without our knowledge, we can tracking them and revert to as what we configured in sg.
+
+STEPS:
+
+NEW INGRESS RULE -> CW EVENTS -> LAMBA FUNCTION ->  NEW INGRESS RULE(Which delete the newly config in SG) -> EMAIL NOTIFICATION
+
+1. Create Custom VP Security Group.
+
+2. Create Cloud Trail on the Region
+
+3. Create lmaba execution with ec2 permission
+
+4. Create Lamba fun and add which security group need for revert changes
+
+Note: code I think tamil_cloud 53 video in descrption, I am not sure,check it out if is there  or not.
+
+IF THERE, FOLLOW THE VIDEO STEPS
+
+5. Add Cloudwatch Event Trigger for security group changes
+
+6. Test: Change th rule in security group.
+

@@ -1,0 +1,39 @@
+NEW COMMANDS:
+1. df -h -> To view the file system in our machine.
+
+2. mkfs -t(type) ext4 /dev/xvdf 
+
+3. chmod -R(Recursively included dirs)f 700 /var/www/html
+
+4. tail -f(live files changes) /var/log/mail.log 
+
+5. ls -lrt - frequently used in companies
+
+FILE TRANSFER SERVER TO SERVER(scp(for short files))
+
+FILE: 
+
+6. scp -i keyofremoteserver source_file username@private-ip: - For Home dir
+
+7. scp -i keyofremoteserver source_file username@private-ip: /path
+
+DIR:
+
+8. scp -i keyofremotreserver -r(recursively) source_dir username@private-ip: - For home dir
+
+9. scp -i keyofremotreserver -r(recursively) source_dir username@private-ip:/path
+
+
+FILE PERMISSION:
+
+WE CAN'T OPEN A DIR WHEN USER PERMISSION IS DIFFER
+
+KEY:
+
+GET PUBLIC FROM PRIVATE :
+
+cmd : ssh-keygen -y -f private-pem-file
+
+
+
+

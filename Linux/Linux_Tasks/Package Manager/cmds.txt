@@ -1,0 +1,25 @@
+PACKAGE MANAGER:
+
+dpkg -low level pkg - which throws some dependency errors. So we moved to apt.
+
+apt(advanced package tool)
+
+cmds:
+
+1. sudo apt install 
+
+2. sudo apt remove - Deletes pkg, but leaves their user data content in our machine like /var/www/html/index.html
+
+3. sudo apt purge - permenantly pkg
+
+4. sudo apt list | grep nginx
+
+5. sudo show nmap - description of the pkg of the nmap
+
+6. sudo apt search name 
+
+7. sudo apt list --installed | grep nmap
+
+8. sudo apt update && sudo apt full-upgrade -Which perform autoremove cmd though
+
+9. sudo aptitude - which shows the gui form of option is to be update or upgrade like that.

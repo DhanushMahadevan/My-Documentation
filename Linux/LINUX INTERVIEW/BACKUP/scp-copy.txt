@@ -1,0 +1,17 @@
+SCP:
+
+SCENARIO:
+
+Copying a file from one machine to another
+
+PRE-REQUESTS:
+
+1.PEM KEY SAVED ON OUR MACHINE 
+2. scp --version
+3. port 22 working
+CMD:
+sudo scp -i key source_file ec2-user@private-ip:  - For Home dir of the remote user
+sudo scp -i key source_file ec2-user@private-ip:/path - Based on path of the remote user
+
+
+

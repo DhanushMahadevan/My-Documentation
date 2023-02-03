@@ -1,0 +1,46 @@
+aws s3 ls
+    7  aws s3 ls
+   14  aws s3  | grep -i delete
+   15  aws s3 help | grep -i delete
+   16  aws s3 help | grep -i rm
+   17  aws s3 mb s3://dhanush09
+   18  aws s3 ls
+   19  aws s3 rm elasticbeanstalk-us-west-2-729136773185
+   21  cp elastic-dhanush/ s3://elasticbeanstalk-us-west-2-729136773185
+   22  aws s3 cp elastic-dhanush/ s3://elasticbeanstalk-us-west-2-729136773185
+   23  aws s3 cp elastic-dhanush/ s3://elasticbeanstalk-us-west-2-729136773185/elastic-dhanush
+   27  aws s3 cp elastic-dhanush/ s3://elasticbeanstalk-us-west-2-729136773185/elastic-dhanush
+   28  aws s3 cp elastic-dhanush s3://elasticbeanstalk-us-west-2-729136773185/elastic-dhanush
+   32  aws s3 cp a s3://dhanush09
+   33  aws s3 ls
+   34  aws s3 cp a s3://elasticbeanstalk-us-west-2-729136773185
+   35  aws s3 ls
+   37  aws rb s3://elasticbeanstalk-us-west-2-729136773185
+   38  aws s3 rb s3://elasticbeanstalk-us-west-2-729136773185
+   39  aws s3 rb s3://elasticbeanstalk-us-west-2-729136773185 --region us-west-2
+   40  aws s3 rb s3://elasticbeanstalk-us-west-2-729136773185 --region us-west-2 --force
+   41  aws s3 ls  s3://dhanush09 --recursive
+   42  aws s3 cp s3://dhanush09/PRIVATE_NEW_KEY(1).ppk
+   43  aws s3 cp s3://dhanush09/PRIVATE_NEW_KEY(1).ppk .
+   44  aws s3 cp s3://dhanush09/'PRIVATE_NEW_KEY(1).ppk'
+   45  aws s3 cp s3://dhanush09/'PRIVATE_NEW_KEY(1).ppk' .
+   47  aws s3 rm s3://dhanush09/a
+   48  aws s3 rm s3://dhanush09
+   49  history | grep -i s3
+   50  aws s3 ls  s3://dhanush09 --recursive
+   51  aws s3 rb s3://dhanush09
+   52  aws s3 ls s3://elasticbeanstalk-us-west-2-729136773185 -recursive
+   53  aws s3 ls s3://elasticbeanstalk-us-west-2-729136773185 --recursive
+   54  aws s3 ls s3://dhanush09 --recursive
+   55  aws s3 rb  s3://elasticbeanstalk-us-west-2-729136773185
+   56  aws rb s3://dhanush09
+   57  aws s3 rb s3://dhanush09
+   58  aws s3 ls s3://dhanush09 -r
+   59  aws s3 ls s3://dhanush09 -recursive
+   60  aws s3 ls s3://dhanush09 --recursive
+   61  aws s3 rm s3://dhanush09
+   62  aws s3 ls s3://dhanush09 --recursive
+   63  aws s3 rm s3://dhanush09/PRIVATE_NEW_KEY(1).ppk
+   64  aws s3 rm s3://dhanush09/'PRIVATE_NEW_KEY(1).ppk'
+   65  aws s3 rb s3://dhanush
+   66  aws s3 rb s3://dhanush09

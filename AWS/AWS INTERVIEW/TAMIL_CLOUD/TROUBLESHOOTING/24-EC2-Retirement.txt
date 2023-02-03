@@ -1,0 +1,8 @@
+*********************************************************
+AWS Instance Retirement AWS Cloud Eng Activity
+********************************************
+
+  1) Prod Instance Get approval schedule 
+     * Stop and Start Instance
+  2) After AWS Retirement Terminate 
+     * Take ami and launch new instance remap elastic ip

@@ -1,0 +1,61 @@
+USE VIRGINIA(US-EAST-1) MAXMIUM .CAUSE OF MAJOR ERRORS ARE NOT FACED IN THAT REGION LIKE CREATING RDS WITHOUT SETUPING EC2 AND HIGH AVAILABILITY ZONES 
+
+Daily Tasks:
+*Do linux cmds from Linux Docs- like lvm
+ 
+Completed Concepts(Watch Billing for each services):
+
+NOTE: EC2 COMPARSION INFO(Just Simply type ec2 comparsion in browser,There is a link called ec2instance.info) & AMAZON PRICE CALCULATOR ONLINE (https://calculator.s3.amazonaws.com/index.html). MORE USEFUL .PLZ GO THROUGH 
+
+1. EC2 - VOLUMES, SNAPSHOT, AMI, AUTOSCALING(Launch configuration and launch template), LOAD BALANCER(Target Groups,Application Load Balancer) 
+
+2. VPC - VPC, SUBNETS, ROUTE TABLE, INTERNET GATWAY, SECURITY GROUPS, 
+
+Need to study(Basic 2 and 3 tier architecture):
+
+1. EC2 - EBS(Snapshot policy,FSR(FAST SNAPSHOT RESTORE)), PLACEMENT GROUPS, AUTOSCALING(LifeCycle Manager), LOAD BALANCER (Network Load Balancer with log enabling)
+
+2. VPC - NAT Gateway, ELASTIC IP, VPC ENDPOINT,  PEERING CONNECTIONS(Intra and inter region Peering),TRANSIT GATEWAY, NACL, VPN, VPC FLOW LOGS(IMPORTANT).
+
+3. Route 53 - (6 policies like Simple Routing,Failover Routing,Weighting for etc..)
+
+3. RDS 
+
+4. IAM(Users, Groups, Policies(Custom) and Roles(Custom))
+
+5. S3(More Interview Question expected)- Bucket Permission
+
+6. CloudTrail
+
+7. EFS (Buried or Throughput mode)
+
+8. Session Manager 
+
+9. Patch Manager
+
+10. CLOUD WATCH (Important should have know about logs)
+
+11. SNS
+
+12. SQS
+
+13. SES
+
+14. Trusted Advisor
+
+15. KMS 
+
+MISC:
+
+16. Inspector
+
+17. Grafana
+
+18. Redshift
+
+19. Pipeline
+
+20. SSL
+
+
+  

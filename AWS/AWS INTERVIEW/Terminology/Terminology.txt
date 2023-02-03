@@ -1,0 +1,8 @@
+1. SERVER NAME: 
+BASTION HOST OR JUMP BOX OR JUMP SERVER or mgmt server: It is public subnet which is used to accessible the private subnet
+
+2. VOLUMES: 
+
+Ephermeral - Storage is attached to the instance by default, that is Instance store 
+
+Non Ephermeral - Storage is not attached to the instance by default, but located in somewhere like ebs.

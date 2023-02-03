@@ -1,0 +1,64 @@
+				AWS CLI with EC2
+NOTE:
+IF WE CONFIGURE SPECIFIC REGION WHILE ENTERING ACCESS KEY,SECRET KEY,
+WE DON'T NEED TO SPECIFY THE REGION ON EVERY CMD
+
+
+1.Create instance:
+--------------------
+
+PUBLIC-1:
+aws ec2 run-instances --image-id ami-0849a313b038afda0 --count 1 --instance-type t2.micro --key-name TESTKEY --security-group-
+ids sg-0c20530f660c6f577 --subnet-id subnet-0051e5e1330201ff1 --region us-west-2
+
+PUBLIC-2:
+aws ec2 run-instances --image-id ami-0849a313b038afda0 --count 1 --instance-type t2.micro --key-name TESTKEY --security-group-
+ids sg-0c20530f660c6f577 --subnet-id subnet-069e33edd57a4e37a --region us-west-2
+
+PRIVATE-3:
+aws ec2 run-instances --image-id ami-0849a313b038afda0 --count 1 --instance-type t2.micro --key-name TESTKEY --security-group-
+ids sg-0c20530f660c6f577 --subnet-id subnet-014f6879b2a45b880 --region us-west-2
+
+
+
+*******************************************************************
+2.Create tag and add to instance
+----------------------------------
+
+aws ec2 create-tags --resources i-07ecbf969efe0d3b9 --tags Key=Name,Value="ENDPOINT 1"
+--region us-west-2
+
+*******************************************************************
+
+3. Instances list
+--------------------------------------
+
+aws ec2 describe-instances --filters "Name=tag:Name,Values=Server 1"
+--region us-west-2
+
+*******************************************************************
+
+4.Start/Stop the Instance
+----------------------------------------
+
+aws ec2 start-instances --instance-ids i-07ecbf969efe0d3b9 --region us-west-2
+
+
+*******************************************************************
+
+5.Termininate Instance
+------------------------------------
+
+aws ec2 terminate-instances --instance-ids i-0179787568ac2f50c i-05aba5b2c45c648b8 --region us-west-2
+
+
+*******************************************************************
+
+6.Delete the launch Template
+-----------------------------------------
+
+aws ec2 delete-launch-template --launch-template-id lt-0811dc3a4c80ef01c --region us-west-2
+
+or without region specified
+
+*******************************************************************

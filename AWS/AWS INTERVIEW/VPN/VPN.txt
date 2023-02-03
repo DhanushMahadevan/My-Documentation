@@ -1,0 +1,16 @@
+VPN Component:
+
+Definition:
+	Access AWS resource from our on-premise through VPN.
+
+Steps to create VPN(36$ per month for vpn):
+
+	1. Create customer gateway, put static or dynamic ip of  the vpn router.
+	2. Create VPN Gateway -Attach to VPC
+	3. Site-to-site Connection - Choose VPN Gateway ID and Customer Gateway
+ 	4. Finally, Put entry in route table ->route propagation
+
+	5. After the entry have put, Our Site-to-site connection , Two tunnels will up which gives two tunnel ips.
+	6. Download the configuration.
+	7. Which downloaded as two presec key files.
+	8. Config our on-premise firewall by following Downloaded presec key files.

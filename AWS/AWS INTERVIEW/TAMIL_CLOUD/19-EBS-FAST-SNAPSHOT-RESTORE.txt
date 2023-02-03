@@ -1,0 +1,10 @@
+AWS - EBS FAST SNAPSHOT RESTORE(FSR): IT IS COST PER HOURLY
+ Definition:
+Retriving the storage from s3 to Create an ebs from snapshot in faster way
+
+PROCS:
+	1. WE WILL GET CREDIT AS CPU CREDIT
+
+FSR:
+S3 -> SNAPSHOT -> EBS
+

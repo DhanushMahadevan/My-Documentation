@@ -1,0 +1,18 @@
+TASK 1(IMPORTANT):
+PRE-REQUESTS: 
+
+1.CREATE A ROLE FOR FLOWLOGS AND ATTACH THAT ROLE INTO VPC FLOWLOGS.
+	i) Create a empty a role.
+
+	ii) Create a policy for flowlogs and attach to the role.
+
+	iii) In IAM Roles, Trust relationship(trusted advisor)-> Edit trust policy -> remove service as e2.amazonaws.com and replace as vpc-flow-logs.amazonaws.com
+	iv) update that role
+
+2. Create log group in cloudwatch and integrate with vpc logs
+
+VPC FLOW LOGS - WHICH MONITORING OUR WHOLE VPC RESOURCE
+
+THERE IS OPTION CALLED IN FILTER, THAT IS Accept, Reject and all like Access log(Accept) and error log(Reject).
+
+NOTE: SAVE THE CONTENT OF FORMAT PERVIEW IN NOTEPAD. IT HELPS TO VIEW  OUR LOGS IN LOG GROUP

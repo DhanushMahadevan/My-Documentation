@@ -1,0 +1,30 @@
+ARM VS x86?:
+ARM(fastest) - CONSUME LESS ELECTRICITY ,IT IS MAJORLY USED IN MOBILE PROCESSORS LIKE IPHONE AND ANDRIOD.
+x86(Moderate) - CONSUME LARGE ELECTRICITY , IT IS MAJORLY USED IN DESKTOP,LAPTOP
+
+A1 - Amazon graviton processor(arm)
+T2 - INTEL XEON processor(x86) - start in nano - low moderate
+T3a(upto 5 gigabit),M5a(bandwidth min(3500mbps)) - AMD epyc processor(x86) - In M series start in large
+
+NOTE:
+
+1.T2,T3a,T3 ARE BASELINE performance(which means we can use only 20% of the cpu,but we can't use full cpu in this baseline performance instances) bustable INSTANCE(Cause we can use only cpu credit/hr level .cpu credit/hr means when we are maintaining the instance as aws mentioned in their cpu credit/hr, we can get credit, it gives when we need more performance or peak hour our credit will help to perform as more performance.)  TO USE FOR DEVELOPER AND TESTER LIKE SHORT WORKLOAD CREATING STATIC SMALL WEBSITE
+
+2.PRODUCTION SERVER ARE MOST PROBABLY M4 and M5 SERIES SERVER
+
+3. BUT WHEN U NOT RELY ON CPU CREDIT , WE CAN ENABLE THE OPTION WHEN WE ARE LAUCHING T2/T3 INSTANCE,WE CAN SEE UNLIMITED ENABLE OPTION . BUT IT IS ADDITIONAL CHARGABLE
+
+NOTE:
+--------ONLY T2/T3 HAVE THE UNLIMITED OPTION IN AWS ------------------
+
+A1(Bandwidth upto 10Gbps) IS CHEAPER BUT AVAIL ON US REGION THAT'S ARM ARCHITECTURE.	 
+
+-----------------------------------------------------------------
+12th video:
+
+BENEFITS OF UPGRADING T2 TO T3:
+	1. Better performance in network
+	2. price reduce (t2.small > t3.small)
+	3. T2 small to T3 small vCPUs(Virtual CPUs) increases than t2 small
+
+------------------------------------------------------------------------
