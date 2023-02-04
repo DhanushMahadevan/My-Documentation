@@ -143,7 +143,7 @@ eg. git remote add hdfc https://github.com/dhanlog/repo-name.git
 
 3. git push name(name is nothing, the alias of the name) master(branch master or  if we have branch we can specify as a branch)
 
-eg. git push hdfc master
+eg. git push hdfc master or git push -f(forcefully) -u(up-stream) hdfc master
 
 OUTPUT OF THE ABOVE CMD IS ASKING FOR GITHUB USERNAME AND PASSWORD
 
