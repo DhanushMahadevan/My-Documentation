@@ -1,0 +1,9 @@
+20/09:
+1.echo-which means print - procs(we can append any text from whereever we here) -echo "msg" >> /path/filename 
+2.grep 90%(interview) - ls | grep -i "file or fi*"(only use single pipe search is not viewed,so we use ls before this cmd)-
+-only we use present within the directory
+3.locate - not only use in many favours 
+4.find -d(dir) or f(file) 
+
+
+  

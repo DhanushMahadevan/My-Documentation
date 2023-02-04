@@ -1,0 +1,17 @@
+21/09:
+User group management
+1.useradd name (saved inside the home directory,to view cat /etc/passwd)
+2.passwd name (first must u specify what user they are ,then type password)
+3.userdel name (first must u specify what user they are , it deletes only username it keeps their directories)
+4.groupadd (name) -(this group name saved inside the /etc/group)
+5.groupdel (name)
+[Path has user info:
+cat /etc/passwd
+cat /etc/shadow
+Path has group info:
+cat /etc/group
+cat /etc/gshadow]
+gpassswd -a(each single is to be added) username groupname
+gpasswd -M(Multiple user) u1name,u2name, gname
+gpasswd -d(delete for single user only) username gname
+lid(list of id's) -g gname(To view th user who does exist in that group)

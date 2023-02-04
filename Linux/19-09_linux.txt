@@ -1,0 +1,16 @@
+file editor:
+1.touch 90% -create a file - can't edit .
+2.cat filename(existing filename) -view 90%, cat > filename -create a file, cat >> filename(existing) -append, 
+ctrl+D - to save the existing file and it,
+to edit vim/vi 90%.
+3. ls -lt -view the recent file by time.
+4. just select a text or paragraph and paste by clicking the right click to would be pasted.
+vi(colorless)/vim(colors):
+*To insert -a,e,i(90%),o,u
+*To edit or escape or delete- esc
+*To save and exit - :wq!(save)(exit)(forcefully)
+* To delete a single line - esc+dd
+* To delete a word - esc+dw -  from where the cursor is.
+nano(no real time when heavy work it is recommended):
+
+ 

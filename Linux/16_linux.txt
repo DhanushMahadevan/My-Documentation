@@ -1,0 +1,13 @@
+16/09:
+1.mkdir f1 f2 f3
+2.rm -rf filenamefirst letter or combine letter * (or) rm -rf *(warning it erases whole system)
+3.touch filename -create a file
+4.cp filename /path -copy a file to the destination directory
+5.mv filename /path -move a file to the destination directory
+6.cp -r /directory /path -copy a directory to the destination
+7.mv /directory(if we are present in the another directory) /path (or) mv directory(if we are presesnt int the same directory)
+	note: no need to add -r in the mv cmd .cause it shows error.
+8.head -number,more ,tail -number -first 5 lines, inbetween lines, last 5 lines.
+note:In more cmd use spacebar to move down 
+Day to day life cmd:
+Inside the var/log -dmesg(disk matter files) use tail cmd to view last files 

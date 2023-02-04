@@ -1,0 +1,8 @@
+at(at noon or at 10 shedule backup or program) and 
+$batch(not time is specified or for script run)
+ - old fashion
+linuxconfig.org/lvm
+resume for lvm
+Step1: Install lvm pkg
+Step2: Partition
+Step3:
