@@ -1,0 +1,173 @@
+GIT:
+
+
+CMD FLOW(After config user and email and remote add cmd):
+1. Create a feature branch and do git checkout feature_branch
+2. Create a dir and do git init
+3. git add .
+4. git commit -m "message"
+5. git push docs feature_branch
+6. git checkout master
+7. git merge feature_docs
+8. git push docs master
+
+PRE-REQUESTS:
+
+1.*****STOP THE INSTANCE DON'T DO TERMINATE THE INSTANCE,
+
+2. CREATE A DIR LIKE DAY1,DAY2 LIKE THIS 
+DO GIT INIT FOR ONE TIME IN A LIFE OR DELETE THE DIR,CREATE THE DIR,GIT INIT. AND WORK ON IT OR{Don't delete the content after push .Everything is trackable, if we delete,next time we will push it will also deleted the pushed contents previously}.***********
+
+2. CREATE A NEW DIR FOR 
+3. AND MAKE SURE CREATE OUR OWN BRANCH.DON'T DO IN MASTER BRANCH 
+
+DO FORK BEFORE 90 DAYS, CAUSE IT WILL DELETED AUTOMATICALLY OUR REPO WHEN WE HAVEN'T BEEN USING OUR REPO FOR 90 DAYS.
+
+INTERVIEW :
+
+THEY ARE ASKING FOR CMD AS MUCH AS THEORY. SO CONCENTRATE ON CMD.
+
+TASK: PULL VS CLONE VS FETCH
+
+DEFINITION:
+
+GIT is a distributed version-control system which can track our code.
+
+red color - not move to the staging area
+
+green color - staging area
+DAY 1:
+
+1. Install git in local
+ 
+PRE-REQUEST:(USERNAME AND MAIL IS SAME AS GITHUB ACCOUNT)
+ git config --global user.name "Dhanush-Mahadevan" 
+git config --global user.email "dhanushlogesh62@gmail.com"
+
+NOTE : THEY CAN RUN WITHOUT GLOBAL FLAGS, WHEN THEY WANT TO COMMIT TO THE LOCAL REPO OF SPECIFIC DIRS OF THE SPECIFIC USERS.
+BUT BEST PRATICE, MAKE SURE RUN AS GLOBAL FLAGS FOR USING ONE MACHINE -  ONE USER.
+
+2. Create a dir
+
+3. Inside that dir, create local repo - git init (Which creates an hidden dir of empty repo LIKE .git dir, THAT MEANS CREATS LOCAL REPO)
+{LOCAL REPO COMMON FOR ALL BRANCHES}
+
+4. Create a file and add content into as First line.
+
+5. To see the status of the file - git status (long format)or git status -s (Which shows ??(untracked file , That is not tracked by git ) file-name)
+
+{If git status -s cmd is return nothing, all the working dir is committed in local repo, That is working tree is clean. Use git status - it returns detail in the previous sentence}
+
+6. *********** GO through the green-tech-devops-first-video(55:51) - It displays the screenshot of lifecycle of the git flow  ************
+
+7. We should move to staging area of our work -(git add)
+
+8. After that, In the end we should move to the local repo. Cause it gets the logs(history) of when we move to the local repo.- (git commit -m 'message'). So when new features is successfully added. Then commit to the local repo.
+
+{EXECUTING ADD AND COMMIT in one cmd:
+
+PRE-REQUESTS:
+ IN BELOW CMD IS WORK ON AFTER THE FIRST COMMIT. IF WE DO IN FIRST COMMIT . IT WILL ASKING FOR FIRST ADD AND COMMIT IN TWO STEPS.
+
+git commit -a -m or -am "message"}
+
+SCEANRIO:
+
+DEVELOPER MOVES TO THE LOCAL REPO WHEN THEY GOT SHIFTED OUT OF THE COMPANY(EVENING) , SO BEFORE EVENING THEY ARE ONLY MOVE TO STAGING AREA. BUT SOME PEOPLE MOVE THEIR CODE 2 -3 DAYS WORK DONE. AFTER THAT WE WILL COMMIT IN LOCAL REPO.
+
+9. Moving our file from working directory to staging area:
+	git add file-name(which shows A file-name, That means it has been added)
+
+10. Moving our file from staging area to local repo
+
+	git commit -m "first commit" (which shows successfully commit. *******But if we skip the PRE-REQUESTS ,it needs name and email address of the person who's moving that file(global config of user and email*******)).
+
+{ After FIRST COMMIT, BRANCH IS CREATED do git branch: returns the branch name. BEFORE COMMIT DO : git branch  
+ nothing returns.}
+
+11. git log or git log --oneline  (which shows of the git logs after commit of the HEAD, it differ from many branches based on head of that particular branch)
+
+12. If we want to see the content of the file after commit:
+	git show commit-id(commit-ids are get from executing git log or git log --oneline cmd) 
+-----------------------------------DAY 2:
+
+13. Editing existing file:
+	-> ASSUMATION OF SCENARIO: I AM COMING DAY 2 , ADD SOME CODE ON THAT FILE
+
+	 Add some content on that file. Now Then Check the status of the file(NOTE : DON'T USE FILE NAME WHILING git status -s )
+
+14. git status -s (Now It returns the red colored M file-name(modify,cause in the day 1,we had added some content and return green colored A  file-name.  So now red-coloredM file-name))
+
+NOTE:
+****************
+HERE I  MENTIONED RED AND GREEN COLOR.  GO THROUGH THE FIRST FEW LINES OF THIS DOCS*********
+
+15. Now I added to staging area :
+	git add file-name(The red colored M willbe changed as green colored M . when executing git status -s(short). cause now successfully move to the staging area)
+
+16. git commit -m "Second commit"
+
+17. git log OR git log --oneline(short details) (2 logs are displayed)
+
+18. git show commit-id
+
+NOTE:
+
+IF  WE HAVE THE COMMIT-ID WE CAN EASILY TRACK OUR CHANGES BY EXECUTING git show commit-id
+
+---------------------------------
+
+PUSHING OUR CODE TO REMOTE REPO:
+
+PRE-REQUSTS:
+
+GITHUB ACCOUNT(PUBLICLY NOT COMPELETELY FREE OR PRIVATE NOT COMPLETELY FREE , Green-tech says there is threshold is maintain by github)
+
+STEPS in GITHUB A/C:
+
+1. Create a repo as Name-date (Documentation2901)
+
+2. public(checkin) or private 
+
+3. click create repo button
+
+4. They will give the link
+
+STEPS IN GIT:
+
+
+PRE-REQUESTS:
+
+	1. CREATE PERSONAL ACCESS TOKEN on github a/c -> Developer settings:
+ 
+	In terminal:git remote set-url alias-name-of-url https://accesstoken@github.com/dhanush.........git
+	
+	2.git remote add name (like aliasoftheurl we can specify anything name in aliasoftheurl) url (repolink of github)
+
+eg. git remote add hdfc https://github.com/dhanlog/repo-name.git
+
+	3. Change default branch as master,if not showed in github .create a branch and push to remote(github). 
+
+1. ***** git push ->  enter -> which displays the warning If we skip the PRE-REQUESTS , first we should create an url and then we will push anything.
+
+2. git remote (which shows the aliasname of the url like hdfc(project-name)) url
+
+3. git push name(name is nothing, the alias of the name) master(branch master or  if we have branch we can specify as a branch)
+
+eg. git push hdfc master or git push -f(forcefully) -u(up-stream) hdfc master
+
+OUTPUT OF THE ABOVE CMD IS ASKING FOR GITHUB USERNAME AND PASSWORD
+
+4. FINALLY WE HAVE BEEN SUCCESSFULLY PUSH OUR CODE TO THE REMOTE REPO OF THE MASTER BRANCH
+
+5. Reload the GITHUB Page.
+
+6. Now then, we will see the commits of 2 in github page
+
+
+NOTE*******************************:
+
+WHEN WE SELECT THE COMMITS , WE WILL SEE THE EXACT CODE AS PRESENT AS WHEN THEY HAD COMMITTED OF THE DAY.
+MISC:
+
+GO TO THE EXPLORE PAGE IN GITHUB , WE WILL SEE THE GLOBAL USER OF THE GITHUB , SELECT TRENDING , THEY WILL HAVE 4000 5000 COMMITS ARE THERE.

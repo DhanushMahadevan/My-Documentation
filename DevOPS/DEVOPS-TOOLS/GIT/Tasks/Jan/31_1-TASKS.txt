@@ -1,0 +1,43 @@
+TASK 0:
+
+WARNING********************. SO BEST PRACTICE
+
+WE DON'T USE GIT RM RF CMD IT WILL DELETED IN OUR ORIGINAL CONTENT OF THE FILE IN OUR LOCAL MACHINE. JUST WORK IN SOME TEMPERARY DIR. THAT INSIDE THE INSIDE THE DIR. EXECUTE THE GIT  INIT.
+ 
+COMPELETED::::::::::::::
+--------------------------------------------------------------------
+
+TASK 0.1:
+
+GIT INIT AND DO GIT BRANCH - NOT WON'T RESULT ANY OUTPUT. CAUSE WE DO FIRST COMMIT. IT WILL RETURN THE MASTER
+
+----------------------------------------------------------------
+
+TASK 1: 
+
+STAGING TO WORKING DIR:
+
+git reset - EVERYTHING IS TO BE UNSTAGED that means working dir. EVEN THOUGH AFTER PERFORMED SOME ACTION LIKE rm -rf , etc.
+
+COMPELETED::::::::::::::::::::
+--------------------------------
+
+TASK 2:
+
+DELETE REMOTE REPO FROM LINUX:
+
+BASIC: 
+LOCAL REPO LINKED WITH REMOTE REPO. CAUSE WE SHOULD DELETED THE LOCAL REPO AND DO PUSH THE CMD.
+
+git rm -r filename
+git commit -m "" 
+
+ NOTE :if we won't msg . it will show text file inside of .git/COMMIT_EDITMSG
+
+----------------------------------------------------------
+
+TASK 3:
+
+CREATE A DIR IN REMOTE REPO
+
+GO TO THE GITHUB -> CREATE A NEW FILE -> NAMED IT AS DIR NAME WITH FORWARD SLASH(/).

@@ -1,0 +1,17 @@
+TASK 1:
+
+1. WHATIF DO PUSH WITHOUT COMMIT?
+
+ANSWER: NO
+------------------------------
+
+2. WHATIF DO COMMIT WITHOUT ADD?
+
+ANSWER: NO , We can use git commit  -a -m "message"
+
+-----------------------------------
+3. WHATIF DO  git log or git status WITHOUT  GIT INIT OR ADD?
+
+
+ANSWER: NO , WE CAN'T GET ANY OUTPUT. CAUSE WE SHOULDN'T HAVE EXECUTED GIT INIT CMD. GIT INIT IS STARTING OUR WORKING DIR AS GIT LOCAL REPO. AND THE GIT LOG IS USED AFTER THE COMMIT OTHERWISE IT WILL  THROUGH AN ERROR
+-------------------------------

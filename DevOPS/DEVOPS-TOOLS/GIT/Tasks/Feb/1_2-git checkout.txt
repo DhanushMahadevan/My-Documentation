@@ -1,0 +1,4 @@
+git checkout filename -
+ Switch local repo to working dir branches or restore working tree files. And also used to recover our file.
+
+git checkout branch-name - switching b/w branches
