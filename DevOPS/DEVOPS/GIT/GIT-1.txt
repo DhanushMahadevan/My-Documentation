@@ -1,5 +1,16 @@
 GIT:
 
+
+CMD FLOW(After config user and email and remote add cmd):
+1. Create a feature branch and do git checkout feature_branch
+2. Create a dir and do git init
+3. git add .
+4. git commit -m "message"
+5. git push docs feature_branch
+6. git checkout master
+7. git merge feature_docs
+8. git push docs master
+
 PRE-REQUESTS:
 
 1.*****STOP THE INSTANCE DON'T DO TERMINATE THE INSTANCE,
