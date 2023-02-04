@@ -1,0 +1,20 @@
+Routing protocols:
+
+RIP(Routing information protocol)
+(Shortest path - Least no of router or low hop counts)
+(distance vector protocol) 
+(Note: Which send updated ips to the another router in Every 30 Secs)
+- First routing protocol is introduced. Based on Hop count( packets are passed by how many routers to reach the destination router )
+which is counted from 1st router or network router
+
+
+WE CAN SEE THE RIP ROUTING TABLE IN TYPE CONNECTION AS C(DIRECT CONNECT) & R(FROM RIP EARNED UPDATED IP)
+Note(Interview Questions):
+When hop count is Zero.There is no supporting router(Inbetween routers) to route the destination router 
+When we connect the same router network.
+when Inbetween routers are played, we must count the hop
+
+OSPF(Speedest path)(link vector protocol)(Based on serial cable( 1.5mbps) or ethernet(faster than serial) or fast ethernet(10 mbps faster than both serial and ethernet))
+
+
+ 

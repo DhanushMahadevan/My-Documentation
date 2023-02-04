@@ -1,0 +1,11 @@
+ CLS
+ IPCONFIG
+ IPCONFIG/ALL
+ IPCONFIG/DISPLAYDNS 
+ IPCONFIG/FLUSHDNS - to delete the dns entries
+ ARP -A - arp table in our machine
+ NSLOOKUP - we will see the activated port in our machine
+ PING - checks can we reach the destination machine or connection alive from the source machine
+ TRACERT - we can see no of  hops count to reach the destination network 
+ PATHPING - Combination of ping and tracert cmd.Note:(Using cmd when we lot of info)
+ NETSTAT - which display as slower cause it display protocol name.So fetchihng is speed is dealyed. So use -N flag to that cmd.We will get port number only with high speed response
