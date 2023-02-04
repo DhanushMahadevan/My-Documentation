@@ -1,0 +1,72 @@
+* IF U WANT TO IMPORT A KEY IN ACROSS THE REGION. YOU SHOULD HAVE .PUB FILE OF PUBLIC KEY WHICH IS GENERATE FROM PUTTYGEN (PEM OR PPK FILE). AND MOST IMPORTANTLY SAVE AS .PUB EXTENSION.
+
+* IF WE WANT TO CONNECT A INSTANCE BY PUBLIC IP,YES WE CAN !. BY USING THE CMD: ssh -i key ec2-user@publicip
+
+
+key pair:
+
+1. Need to connect putty - use private key in putty gen when convert to ppk.
+Misc: Provide keypassphrase if we want (extra protection).
+
+2. Need to import key in aws - use public key to save and import in aws key pairs.
+
+Security Groups :
+INBOUNDS:
+* ssh - my ip - which connects only putty app.
+* ssh - anywhere ipv4 - both aws terminal and putty. 
+
+* http - my ip - router connected devices can see the web app.
+* http - anywhere - all connected to the internet with distant isp's.
+
+* https - my ip or anywhere - need ssl certifcate and do same as http.
+
+* All tcp - my ip - which connects both putty app and can see routed connected devices the web app & 
+ all port deployments.
+* All tcp - all ip - which connects both putty app and aws terminal &
+all port deployments
+
+OUTBOUND:
+
+* HTTPS - Anywhere- For downloading update and major packages are located in https web server , So https is enough.
+
+* 
+
+* ICMP ipv4 - echo request and echo response - anywhere 
+------------------------------------------------------------------
+CONNECTING TWO INSTANCE BY SSH CMD:
+
+INBOUND:
+* ssh - SG of intend to connect the instance or THEIR SUBNET IP(WHEN TWO SECURITY GROUPS )
+
+ALTERNATIVE :
+*ssh - Anywhere   and make sure outbound ssh - anywhere
+
+-----------------------------------------------------------------
+
+VPC PEERING:
+INBOUND AND OUTBOUND:
+* ICMP IPV4 - SG OF A ANOTHER INSTANCE . DO ON BOTH SECURITY GROUPS LIKE PUTTING INBOUND AND OUTBOUND OF ANOTHER SECURITY.(MORE SECURE)
+* ICMP IPV4 - ANYWHERE ON BOTH INSTANCE. IT WOULD SEND ECHO REQUEST AND ECHO RESPONSE ON BOTH INSTANCES. 
+
+-----------------------------------------------------------------
+
+VPC ENDPOINT:
+
+INBOUND RULE:
+HTTPS - VPC IP  
+
+ALTERNATIVE METHOD:
+CREATE OWN SECURITY GROUP AND AND PUT INBOUND RULE AS ABOVE .
+
+
+-------------------------------------------------------------------
+
+EFS:
+
+INBOUND RULE:
+
+NFS - ANYWHERE
+
+
+
+--------------------------------------------------------------- 

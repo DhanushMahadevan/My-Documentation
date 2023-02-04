@@ -1,0 +1,24 @@
+GET PUBLIC FROM PRIVATE :
+
+cmd : ssh-keygen -y -f private-pem-file
+
+IF U WANT TO IMPORT A KEY IN ACROSS THE REGION. YOU SHOULD HAVE .PUB FILE OF PUBLIC KEY WHICH IS GENERATE FROM PUTTYGEN (PEM OR PPK FILE). AND MOST IMPORTANTLY SAVE AS .PUB EXTENSION.
+
+
+
+Please follow the below steps to recover the key.
+
+STEP 0) REFER THIS PAGE : https://computingforgeeks.com/how-to-solve-xfs-filesystem-has-duplicate-uuid-error/ or use this cmd: sudo mount -o rw,nouuid /dev/xvdf1  /home/ec2-user/backup/
+
+
+cause we got error at wrong type fs error while mount.because of same UUID  
+
+Step 1) Detach your root volume from your machine using AWS console.
+Step 2) Launch a fresh EC2 instance(Not from your old machine AMI)
+Step 3) Attach your old volume to new EC2 machine
+Step 4) Now login to new ec2 machine and mount the old EBS volume
+Step 5) Now go to that partition then visit home directory inside that machine and go to .ssh folder.
+Step 6) Now generate a new private and public key. Then paste public key into authorized_keys file.
+Step 7) Once you done with above steps, detach that volume from this ec2 machine.
+Step 8) Now attach this volume to your old machine as root volume GIVE NAME xvda
+Step 9) Now try to login to your old machine with the newly generated key.
