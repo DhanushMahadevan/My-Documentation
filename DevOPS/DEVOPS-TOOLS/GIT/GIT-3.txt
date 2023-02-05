@@ -1,0 +1,110 @@
+GIT REBASE:
+
+PRE-REQUESTS: git rebase is run as
+feature_branch
+
+DEFINITION:
+	Merge the head(aka base) of feature_branch to master head(aka base). So it is known as rebase
+
+
+Scenario:
+	When we add some  feature in our code. 
+
+Steps:
+1. We add in our feature_branch. 
+
+2. Add a feature in it as a new filename in the feature_branch,commit it as the new filename.
+
+3. git rebase master (cmd executed from feature_branch)
+
+output: First, rewinding head our replay your work in top of it(which means we have rewinded from master or changes in master).
+
+4. git log - which shows the all commit of master branch and   our feature branch too.
+
+5. git merge dev - cmd from master
+
+-----------------------------------
+GIT WORK-FLOW:
+
+NOTE: 
+	DEPENDS ON COMPANY AND PROJECT MIGHT BE DIFFER IN WORK-FLOW.WE SHOULD DEFINE OUR WORK-FLOW.
+
+SCENARIO:
+	IF WE ARE WANT TO WORK WITH GIT WE SHOULD HAVE GITHUB ACCOUNT.WITHOUT GITHUB, WE WON'T PUSH TO REMOTE REPO (CONFIG USER.NAME & USER.EMAIL)
+
+
+WORK-FLOW STEPS:
+-------------------
+1. WE ARE FORKED OUR WORK FROM 
+CLIENT GITHUB(OWNERSHIP OF THE 
+GITHUB REPO SYMBOL -> A BOOK 
+PRESENT IN REPO NAME) IN OUR 
+COMPANY REMOTE REPO(OWNERSHIP PF 
+THE GIHUB REPO SYMBOL -> FORKED).
+
+2. WHEN NOOBIE DEVELOPER APPEARED 
+IN OUR COMPANY, THEY WILL USE CLONE 
+CMD FOR LOCAL REPO. IT HAS ALSO 
+PRESENT IN .GIT FOLDER(Which means 
+initiliazed git folder).
+
+3. After the execution of (git 
+clone github-link) cmd, do git log 
+which shows the origin. 
+
+4. git branch -a - which shows hidden branches that is remote repo.
+
+5. git branch dev
+
+6. git checkout dev
+
+7. Made some changes and commit it.
+
+8. git remote - which shows origin.cause we have been forked
+
+9. git push origin dev - For tester and other developers to approve our code.
+
+10. git log 
+
+11. After the approved from tester to merge to master git checkout master 
+
+12. git pull origin master - which update the lastest update from remote to local
+
+13. git merge dev
+
+14. Delete the feature branch in local repo after successfully merged.
+	cmd: git branch -d dev
+
+15. Delete the feature branch in remote repo.
+	cmd:git push origin --delete dev
+
+16. Now then, we have only master flawlessly or cleanly :).
+
+17. Finally we have requested to pull to the client for my 1 or 2 months work in standard release.
+
+BASICS OF VERSIONS AND ENHANCEMENTS:
+
+ENHANCEMENTS:
+--------------------
+V1.1
+V1.2
+.
+. 
+.V1.n
+VERSIONS:
+-------------------------
+V2.0 - STANDARD RELEASE VERSION
+V3.0
+.
+.
+Vn.n
+--------------------
+
+ 
+-----------------------------------
+TERMINOLOGY:-
+1. ORIGIN - ORGINIAL OR STARTING POINT REMOTE REPO CONTENTS
+-----------------------------
+  
+
+ 

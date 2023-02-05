@@ -41,3 +41,48 @@ TASK 3:
 CREATE A DIR IN REMOTE REPO
 
 GO TO THE GITHUB -> CREATE A NEW FILE -> NAMED IT AS DIR NAME WITH FORWARD SLASH(/).
+
+
+---------------------------------
+
+Task 4:(Undo local unstaged changes.) 
+
+git restore file-name
+
+PRE-REQUEST: git add (not executed)
+
+
+-----------------------------
+
+TASK 5:(Undo local staged changes.
+) 
+git restore --staged filename
+
+PRE-REQUESTS: git add (executed)
+
+Steps: 
+1. git restore --staged filename
+2. git status 
+3. git restore filename
+
+--------------------------------
+
+TASK 6: (Undo local committed changes)
+
+PRE-REQUESTS: git add & git commit(executed)
+
+ 
+cmd: git reset --soft HEAD-
+
+
+----------------------------------
+
+TASK 7: (Undo Public or remote or github Committed changes)
+
+PRE-REQUEST: git add, git commit and git push (executed)
+
+cmd: git revert commit-id --no-edit
+
+
+----------------------------------
+

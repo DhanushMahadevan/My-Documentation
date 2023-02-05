@@ -20,7 +20,7 @@ IN GIT, We create multiple branches, then we will start working in the branches.
 
 1. CHECKING BRANCHING IN OUR DIR OR LOCAL REPO:
 
-git branch - if it returns the nothing. it means it don't have created any branch.Cause we're doing first commit, the branch will creates
+git branch OR git branch -a(hidden {which means remote repo}) - if it returns the nothing. it means it don't have created any branch.Cause we're doing first commit, the branch will creates
 
 INTERVIEW QUESTION:
 
@@ -40,9 +40,22 @@ git commit -a -m or -am "message"
 
 -----------------------------------
 BASIC **************please take a look :
-WE DON'T DO  CHANGES LIKE ADDING FEATURE IN MASTER BRANCH.Cause the Testing team or QUALITY ASSURANCE TEAM tested our newly feature added code from feature branch. When they
-approved our new feature from testing team. Finally we commit to the master branch(merge cmd plays).
- Unless disapprove our new feauture we work.SO WE HAVE TO CREATE A FEATURE BRANCH NAME IT AS WE DESIRED and work on it.
+WE DON'T DO  CHANGES LIKE ADDING 
+
+FEATURE IN MASTER BRANCH.Cause the 
+Testing team push the code by pull 
+cmd or QUALITY ASSURANCE TEAM 
+tested our newly feature added code 
+from feature branch. When they
+
+approved our new feature from 
+testing team. Finally we commit to 
+the master branch(merge cmd plays).
+
+ Unless disapprove our new feauture 
+we work.SO WE HAVE TO CREATE A 
+FEATURE BRANCH NAME IT AS WE 
+DESIRED and work on it.
 
 Virtuality of file:
 
@@ -96,8 +109,14 @@ NOTE: BUT BOTH TYPES ARE USED IN SAME CMD AS: git merge branch-name
  Before merging, we should do 3 operations:
 
  i) check the branch is master (git branch) 
- ii) git log - check the previous commits in master for merging new commits to the master.
- iii) git merge dev
+ ii) git pull docs master
+
+iii)git log - check the previous commits in master for merging new commits to the master.
+
+ iv)  git merge dev
+
+  v) Delete the feature branch after successfully merged.
+	cmd: git branch -d branch-name
 
 1. SMOOTH MERGE:
  

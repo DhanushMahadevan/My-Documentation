@@ -2,14 +2,49 @@ GIT:
 
 
 CMD FLOW(After config user and email and remote add cmd):
+
 1. Create a feature branch and do git checkout feature_branch
+
 2. Create a dir and do git init
+
 3. git add .
+
 4. git commit -m "message"
+
 5. git push docs feature_branch
+
 6. git checkout master
+
 7. git merge feature_docs
+
 8. git push docs master
+
+BEST PRATICE:
+
+1. Create a feature branch and do git checkout feature_branch
+
+2. Create a dir and do git init
+
+3. git add .
+
+4. git commit -m "First three commits"
+
+5. git branch dev
+
+6. git checkout dev
+
+7. Made some changes like Fourth commit 
+
+8. check git log on both branches like does any changes made?.
+
+9. git rebase master
+
+10. git checkout master
+
+11. git merge dev
+
+12. git branch -d dev (Cause, we should delete the branch after the merge from dev. we don't nolonger)
+
 
 PRE-REQUESTS:
 
@@ -28,6 +63,12 @@ INTERVIEW :
 THEY ARE ASKING FOR CMD AS MUCH AS THEORY. SO CONCENTRATE ON CMD.
 
 TASK: PULL VS CLONE VS FETCH
+
+FETCH : LOCAL REPO UPDATE.
+
+PULL: BOTH LOCAL REPO AND WORKSPACE UPDATE.
+
+CLONE: DUPLICATES FROM REMOTE REPO TO OUR LOCAL MACHINE.
 
 DEFINITION:
 
