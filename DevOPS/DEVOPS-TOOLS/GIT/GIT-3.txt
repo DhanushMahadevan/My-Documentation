@@ -76,7 +76,7 @@ which shows the origin.
 	cmd: git branch -d dev
 
 15. Delete the feature branch in remote repo.
-	cmd:git push origin --delete dev
+	cmd:git push origin -d dev or git push origin --delete dev
 
 16. Now then, we have only master flawlessly or cleanly :).
 
@@ -103,7 +103,8 @@ Vn.n
  
 -----------------------------------
 TERMINOLOGY:-
-1. ORIGIN - ORGINIAL OR STARTING POINT REMOTE REPO CONTENTS
+1. ORIGIN - ORGINIAL OR STARTING POINT REMOTE REPO CONTENTS.
+AKA MAXIMUM IT WOULD BE CLIENT REPO
 -----------------------------
   
 

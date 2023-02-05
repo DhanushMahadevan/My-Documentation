@@ -1,0 +1,17 @@
+There are four fundamental elements in the Git Workflow.
+
+Working Directory, Staging Area, Local Repository and Remote Repository.
+
+BASIC  CMDS:
+
+1. git add is a command used to add a file that is in the working directory to the staging area.
+
+2. git commit is a command used to add all files that are staged to the local repository.
+
+3. git push is a command used to add all committed files in the local repository to the remote repository. So in the remote repository, all files and changes will be visible to anyone with access to the remote repository.
+
+4. git fetch is a command used to get files from the remote repository to the local repository but not into the working directory.
+
+5. git merge is a command used to get the files from the local repository into the working directory.
+
+6. git pull is command used to get files from the remote repository directly into the working directory. It is equivalent to a git fetch and a git merge .
