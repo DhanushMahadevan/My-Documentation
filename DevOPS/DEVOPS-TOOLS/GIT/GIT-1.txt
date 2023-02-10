@@ -11,13 +11,15 @@ CMD FLOW(After config user and email and remote add cmd):
 
 4. git commit -m "message"
 
-5. git push docs feature_branch
+5. git log --oneline or git log --stat
 
-6. git checkout master
+6. git push docs feature_branch
 
-7. git merge feature_docs
+7. git checkout master
 
-8. git push docs master
+8. git merge feature_docs
+
+9. git push docs master
 
 BEST PRATICE:
 
@@ -27,7 +29,7 @@ BEST PRATICE:
 
 3. git add .
 
-4. git commit -m "First three commits"
+4. git commit -m "First three commits" and do git log --oneline or git log --stat
 
 5. git branch dev
 
