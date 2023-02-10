@@ -98,6 +98,9 @@ and do git log - it show the log info of the HEAD-> DEV,
 ----------------------------------
 MERGE CMD :
 
+Cons:
+it merges all over from the branch , If we want to get specific commit Do cherrypick (Cherrypick is presented in GIT-3.txt file)
+
 ADDING THE FEATURE BRANCH TO MASTER BRANCH
 
 Types of merge:
