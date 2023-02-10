@@ -21,6 +21,6 @@ if [ $r = y ];
 then
 	git push docs master
 echo "Successfully pushed to my remote repo"
-
+fi
 
 
