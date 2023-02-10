@@ -1,0 +1,7 @@
+WORK FLOW STRATEGY MIND MAP(Important company-idea):
+
+Step 1: CLIENT ->forked to company 
+
+Step 2: COMPANY -> FORKED  repo -> clone/pull to master
+
+Step 3: MASTER -> CLONE/PULL AND Do work on feature branch . AFTER THE WORK merge and PUSH TO MASTER.
