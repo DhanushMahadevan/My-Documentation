@@ -1,0 +1,41 @@
+github(free)-distributed centralized repo(in org bitbucket(paid and private repo),gitlab)
+
+cmds are same in github & bitbucket
+
+pre-requests
+
+1. mkdir dir(don't do in desktop)
+2. work in initialized dir
+
+---------------------------------------------------
+
+Inside the .git dir 
+
+hooks -> same hook  asg in aws
+
+ref and head is same
+
+master branch - for productions
+
+UAT - testing our code by ci/cd tools
+
+Note:
+
+if anythere is any changes in master push. the create a feature branch and merge & push it.
+
+
+Misc: 
+
+1. git log --stat - stat of log of committed 
+
+2. git remote -v(varies) -> it does fetch and push
+
+3. 
+
+
+
+
+
+
+
+
