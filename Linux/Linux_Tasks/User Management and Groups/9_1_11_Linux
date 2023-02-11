@@ -1,9 +1,0 @@
-USER MANAGEMENT:
-1.sudo useradd name -m (which creates user along with home dir)
-2.sudo usermod -s dhanush /bin/bash or sudo usermod dhanush --shell /bin/bash
-3. sudo usermod -aG(append groups) groupname username
-SUDOERS FILE:
-
-3. sudo visudo
-
-TASK: ALLOW MEMBERS OF GROUP SUDO TO EXECUTE ANY CMD.
