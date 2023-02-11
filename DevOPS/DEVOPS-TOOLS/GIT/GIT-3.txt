@@ -1,3 +1,9 @@
+FUNNIEST NOTE :) :
+WE WON'T USE MERGE LIKE CMDS MAJORLY, THOSE CMDS ARE USED BY DEV. BUT IT IS NOT A MISTAKE TO LEARN Basic of MERGE cmd.
+
+BASIC NOTE:
+ MAJOR DEVELOPER ARE USED IN WINDOWS GUI. CAUSE VSCODE PLUGIN AND EASER TASK WHILE HANDLING MERGE. 
+
 GIT REBASE:
 
 PRE-REQUESTS: git rebase is run as
@@ -30,7 +36,7 @@ NOTE:
 	DEPENDS ON COMPANY AND PROJECT MIGHT BE DIFFER IN WORK-FLOW.WE SHOULD DEFINE OUR WORK-FLOW.
 
 SCENARIO:
-	IF WE ARE WANT TO WORK WITH GIT WE SHOULD HAVE GITHUB ACCOUNT.WITHOUT GITHUB, WE WON'T PUSH TO REMOTE REPO (CONFIG USER.NAME & USER.EMAIL)
+	IF WE ARE WANT TO WORK WITH GIT WE MIGHT HAVE GITHUB ACCOUNT.WITHOUT GITHUB, WE CAN PUSH TO REMOTE REPO by altering CONFIG USER.NAME & USER.EMAIL
 
 
 WORK-FLOW STEPS:
@@ -92,17 +98,10 @@ Step 2: COMPANY -> FORKED  repo -> clone/pull to master
 
 Step 3: MASTER -> CLONE/PULL AND Do work on feature branch . AFTER THE WORK merge and PUSH TO MASTER.
 
+Step 4 : Delete the feature branch after our work has been done in pur feature branch
 
 
-
-
-
-
-
-
-
-
-
+-----------------------------------------------------
 
 BASICS OF VERSIONS AND ENHANCEMENTS:
 
@@ -122,9 +121,65 @@ V3.0
 Vn.n
 --------------------
 
- 
+CHEERYPICK CONCEPT:
 
+Definition:
+
+Merge only specific commit from an branch.
+
+STEPS:
+
+1. mkdir name and do git init
+
+2. create a file and an branch, and do 3 commits in feature branch
+
+3. we should know the commit id of commit what we want to merge into the master
+
+4. Make sure swithed as master branch
+
+5. git cherry-pick (commit-id)  
+
+6. git log 
+
+NOTE: WHATIF WE COMMIT THIRD RATHER THAN SECOND COMMIT TO THE MASTER BY CHERRYPICK?
+
+ANSWER: NO , WE WON'T WE CAN DO ONLY SPECIFIC COMMIT IN HIERARCHICAL ORDER
+
+----------------------------------------------------
+
+GIT STASH(TEMPARAORY MEMORY SPACE LIKE STAGING OR INDEXING AREA):
+
+SCENARIO:
+
+IF I CODE IN 10 LINES . WITHOUT ADDING THE CONTENT INTO THE GIT. WE CAN'T  SWITCHING INTO ANOTHER.
+
+SOLUTION:
+
+TO AVOID THE ABOVE SCENARIO , WE CAN USE STASH CMD. 
+
+CMD: 
+
+1. git stash - To save our working dir into stash for switching to another branch.
+2. git stash pop - resume to the working dir
+  
 -----------------------------------
+GIT TAGS:
+
+SCENARIO:
+
+IF I FINISH THE WORK LIKE RELEASE THE WORK OF THE LAST COMMIT, WE SHOULD SPECIFY THE TAGS TO THE COMMIT AS V1.01.
+
+MANY WAYS IN CMDS: 
+
+1. git tag <tagname> / git tag -a v1.4
+
+2. git tag -a v1.4 -m "my version 1.4"
+
+3. git tag - TO LIST THE TAGS.
+
+4 (Important). git tag -a v1.2 <commit-id>
+
+-------------------------------------------------
 TERMINOLOGY:-
 1. ORIGIN - ORGINIAL OR STARTING POINT REMOTE REPO CONTENTS.
 AKA MAXIMUM IT WOULD BE CLIENT REPO
