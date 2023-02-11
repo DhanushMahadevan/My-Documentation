@@ -1,0 +1,153 @@
+JENKINS(CI/CD) (WRITTEN IN JAVA):
+
+Interview Question:
+
+Jenkins: 8080(tcp)
+
+TASK :
+
+1. CMM LEVEL CONCEPT IN COMPANY?(IF CMM LEVEL IS HIGHER THAN 5, THEY WILL RAISING AN ISSUE ALONG WITH INSTALLATION CODE ALSO.)
+
+2. Ticketing Tool (google search)
+
+3. cron tab
+
+PRE-REQUESTS:
+
+1. JAVA PKG IS NEEDED FROM JENKINS OFFICIAL SITE.
+
+2. LAUNCH AN INSTANCE AND SG OF ALL TCP for initial pratice.If we master we can use specific port in sg. CAUSE JENKINS  AND TOMCAT ARE RUN AS OWN PORTS
+
+
+DEFINITION:
+
+
+FATHER OF DEVOPS.
+
+It is a Continous Integration Configuration Management tool. And It does bridging b/w different tools.
+
+
+WORKFLOW OF CI/CD:
+
+-> - JENKINS
+
+GIT CODE -> CHECK THE CODE(SONAR QUBE) -> BUILD THE CODE OR Maven(java code)/Ant/gradle/LDAP -> ANSIBLE(CODE DEPLOY)->CONTAINER OR SERVER.
+
+-----------------------------------------------------
+TICKETING TOOLS(JIRA,SERVICENOW)(Important):
+
+Why we use ticketing tools:
+
+For Resolve an problem, It is assigned by higher position for raising an issue to us. After the resolved the problem. We should close the issue. 
+
+-----------------------------------------------------
+STEPS:
+
+1. COMPLETE AN PRE-REQUSTS
+
+2. JENKINS INSTALLATION FROM OFFICIAL SITE  - 
+AND ADD A GPGKEY.
+
+gpgkey:
+
+Scenario: 
+Every software updated in weekly or monthly. So this gpgkey added the lastest version where we can get from jenkins installation official page.
+
+3. After successfully installed jenkins. 
+
+4. copy and paster the ip of instance to the browser along with 8080 port number, it will show the jenkins page like asking for initialAdminPassword.
+
+5. Jenkins's  default installed path in /var/lib/jenkins. 
+Jenkins asking for password it is presented in /var/lib/jenkins/secret/initialadminpassword file.
+
+6. go to path what we have the web browser and open the file.
+
+7. copy and paste the initial password from the linux machine jenkins dir to browser. 
+
+8. Install the suggested plugins.
+
+9. create first admin user 
+
+NOTE: 
+After the creating admin user . The initialpassword file will be deleted.
+
+
+----------------------------------------------------
+CREATE A JOB:
+
+EVERY ACTION IS A JOB IN JENKINS.
+
+
+STEPS:
+
+1. Create a job.
+
+2. Freestyle option.
+
+3. Select an build option.
+
+4. execute some shell cmds and save
+
+5. go to dashboard, it shows job . To start the job,Click the build scheduler option in last column of the job.
+
+6. status,weather(Success - Symbol "Sun")(it is taken only last 5 build) reports. If there is any error in cmd
+
+weather(Failures) report:
+
+1. cloud -> 1 out 5 build
+2. cloud with single drop -> 2 out of 5 build
+3. cloud with rain -> 4 out of 5 build
+
+7. After retify the error, it still shows the cloud with rain but status is ticked. cause we run in one time should run the job in 5 times( S S S S S)(WHERE S - SUCCESS).
+
+-----------------------------------------------------
+QUEUEING OF A JOB:
+
+
+INTERVIEW QUESTION:
+
+UPSTREAM AND DOWNSTREAM PROJECTS:
+
+SCENARIO:
+
+WHEN WE USE POST-BUILD ACTION FOR MULTIPLE JOBS, UPSTREAM AND DOWNSTREAM PROJECTS ARE VARY BASED ON WHAT WE QUEUEING.
+
+E.G: DEV JOBS-> TEST JOB-> PROD JOB
+
+WHERE
+
+DEV JOB - DOWNSTREAM TO TEST JOB.
+
+TEST JOB - DOWNSTREAM TO PROD JOB AND UPSTREAM TO DEV JOB.
+
+PROD JOB - UPSTREAM TO TEST JOB. 
+
+NOTE: IF THERE IS ANY ONE OF THE JOB IS FAIL, IT CAN'T DO DOWNSTREAM(Which means next job). Cause of default option .
+STEPS:
+
+1. Create a 3 jobs.
+
+2. We choose the post-build option as job1,job2,job3 for each jobs.
+
+-----------------------------------------------------
+
+TRIGGER(peridioic trigger):
+
+1. CHOOSE BUILD TRIGGER.
+
+2. BUILD PERIODICALLY -> * * * * * (CRON JOBS)
+
+
+-----------------------------------------------------
+REMOTE  TRIGGER:
+
+1. In Build trigger -> trigger remotely -> put any number in authentication token.
+
+2. copy and paste https://instance-ip:8080/....../TOKENNUMBER(INPUT AS AUTHENTICATION TOKEN) 
+
+----------------------------------------------------
+
+ 
+
+
+
