@@ -1,4 +1,4 @@
-JENKINS(CI/CD) (WRITTEN IN JAVA):
+JENKINS(CI) (WRITTEN IN JAVA):
 
 Interview Question:
 
@@ -28,7 +28,7 @@ FATHER OF DEVOPS.
 It is a Continous Integration Configuration Management tool. And It does bridging b/w different tools.
 
 
-WORKFLOW OF CI/CD:
+WORKFLOW OF CI:
 
 -> - JENKINS
 
@@ -132,7 +132,7 @@ STEPS:
 
 -----------------------------------------------------
 
-TRIGGER(peridioic trigger):
+TRIGGER(peridiotic trigger):
 
 1. CHOOSE BUILD TRIGGER.
 
