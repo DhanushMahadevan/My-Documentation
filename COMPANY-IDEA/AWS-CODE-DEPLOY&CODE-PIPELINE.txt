@@ -8,7 +8,7 @@ CODE PIPELINE(GENERIC DEVOPS: JENKINS - JAVA IS NEEDED)
 
 WORKFLOW OF CI/CD:
 
-SAMPLE INSTANCE -> S3(or git) ->code deploy(or ansible) -> PROD SERVER
+SAMPLE INSTANCE -> S3(or git) ->code deploy(or ansible) ->code pipeline -> PROD SERVER
 
 Here CP is missing. Because of alignment issue by me.
 But CP's role is create a pipeline. If any changes in s3, it fetch and update to the prod server.
