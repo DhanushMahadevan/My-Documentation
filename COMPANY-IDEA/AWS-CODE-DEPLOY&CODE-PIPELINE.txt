@@ -1,0 +1,235 @@
+AWS - CODE-DEPLOY(Ruby is needed) AND CODE-PIPELINE:
+
+CODE DEPLOY(GENERIC DEVOPS: ANSIBLE - PYTHON IS NEEDED)
+
+NOTE: IT IS FREE WHEN USING EC2 MACHINES.BUT PAID IN ON-PREMISES MACHINE
+
+CODE PIPELINE(GENERIC DEVOPS: JENKINS - JAVA IS NEEDED)
+
+WORKFLOW OF CI/CD:
+
+SAMPLE INSTANCE -> S3(or git) ->code deploy(or ansible) -> PROD SERVER
+
+Here CP is missing. Because of alignment issue by me.
+But CP's role is create a pipeline. If any changes in s3, it fetch and update to the prod server.
+
+
+TOOLS USED:
+EC2, IAM, S3, CD, CP, CW, SNS.
+
+------------------------------------------------------------------------------------------------------------
+
+CODE DEPLOY:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Deployment: The process of deployment.
+
+PRE-REQUESTS:
+
+USE TAGS FOR EC2. BECAUSE OF CODE DEPLOY ASKING FOR TAGS AND BEST PRATICE TOO.
+
+
+Setup in Brief:
+
+I have used two EC2 instance of AMZ2 Linux. First one is the web server we will be
+configuring. also called CodeDeploy agent. Second EC2 machine is supposed to use by
+developer where the codes are programmed. The names of the resources in the experiment
+are arbitrary and may name the resources your own.
+
+1. Create 2 IAM Roles for EC2-S3 (PROD MACHINE) & EC2-CodeDeploy access( we will configure in code deploy applcation likewise, lamba function(ec2-lamba)).
+
+NOTE: WE CAN CREATE EC2-CODEPIPELINE role here. But we have option in code pipeline service.(It is our choose to create, we will either create role and attach to the code pipeline or create a new role code -pipeline there)
+
+2. Create IAM user account(programmic access) for developer with s3 access & code deploy full access policies.
+
+3. Install and prepare the CodeDeploy agent on webserver or prod server.
+
+4. Create the code from Developer machine
+
+5. Create Codedeploy Application and Push the code to S3 bucket from Developer
+machine
+
+6. Create Deployment Group to include web servers
+
+7. Create Deployment to push the code to the webservers
+
+8. Test the website configuration
+
+
+2- Create IAM user account for developer
+
+	a-Use the existing desktop/laptop or Launcha new EC2 instance. This is used by the
+Developer for the code creation and manual pushing of code to $3 bucket.
+
+	b-Create an IAM user and assign programming access. He should be given
+Amazon$3FullAccess and AWSCodeDeployFulIAccess permissions
+
+	c-execute aws configure command on developer's machine and install the access/secret
+keys.
+
+3- Install and prepare the CodeDeploy agent on webserver
+
+	a-Launch the EC2 instance. This is used for deploying webserver with CodeDeploy.
+
+	b-Create a Tag for the instance. The deployment group member ship for the EC2 instance is
+decided by this Tag. I have used AppName Tag with value SampleApp.
+
+	C-open the port 80 for Security Group since it is a web server.
+	
+	d- Attach the Role s3-ec2-full to this instance.
+
+
+	e-SSH to the PROD Instance and su to root and execute the command below. This will download
+the CodeDeply agent software and install. Make sure the you don't change the directory
+during the process.
+
+
+yum update
+# yum install ruby-y
+# yum install wget -y
+#wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+#chmod+x install
+#./install auto
+# service codedeploy agent status
+
+
+4-Create the code from Developer machine
+
+Note: you may copy the contents from this document to create code. scripts should be given
+execute permissions
+
+	a- SSH to developer machine. I have su to root and a created a directory /root/deploy_dir
+	
+	b- Make sure that zip file of thę of the code and its extracted directory is kept inside the
+directory /root/deploy_dir. mýapplication name is sampleapp.
+	
+	c-Let us visit the code now. The output shows a sampleapp directory which is extracted
+from the code sampleapp.zip
+
+-------------------------------------------------------------------------------------------------
+yaml file:
+
+#cat sampleapp/ąppspec.yml
+
+version: 0.0
+os: linux
+files:
+-source:/ndex.html
+ destination: /var/www/html/
+hooks:
+ Beforelnstall:
+ -location: scripts/httpd_install.sh
+  timeout: 300
+  runas: root
+ -location: scripts/httpd_start.sh
+  timeout: 300
+  runas: root
+ApplicationStop:
+ -location: scripts/httpd stop.sh
+  timeout: 300
+  runas: root
+
+--------------------------------------------------------------------------------------------------
+
+Scripts:
+--------------------------------------------
+cat sampleapp/scripts/httpd_install.sh
+
+#!/bin/bash
+yum install-y httpd
+
+------------------------------------------------
+cat sampleapp/scripts/httpd_start.sh
+
+#!/bin/bash
+systemctl start httpd
+systemctl enable httpd
+
+------------------------------------------------
+cat sampleapp/scripts/httpd_stop.sh
+
+#!/bin/bash
+systemctl stop httpd I
+systemctl disable httpd
+
+------------------------------------------------------------------------------------------------------
+
+5-Create Application & Push the code to S3 bucket:
+
+	a-Create S3 bucket for uploading the code, I have named it as gir-sampleapp
+	
+	b-Change directory to sampleapp developer machine and create a codedeploy application.
+execute the command below.
+
+#aws deploy create-application -application-name sampleapp
+
+	c-Now upload the code to $3 by the executing the command below. Directory of execution
+is important.
+
+#aws deploy push --application-name sampleapp -s3-location s3://gir-sampleapp/sampleapp.zip
+
+	d- Now browse the s3 bucket to see that sampleapp.zip is present.
+
+-------------------------------------------------------------------------------------------------------
+
+6-Create Deployment Group to include webserver(where we can specify lot of server mapping by their tags):
+
+	a- Login to Codedepoly AWS web console
+
+	b- Select sampleapp and click Create Deployment Group from Deployment Groups. 
+
+	c-Enter the values like below and leave the other parameters default
+
+
+Enter a deployment group name: mygrp
+
+Choose a service role: cdrole
+
+Deployment type: in-place
+
+Environment configuration: choose Amazon EC2 instances
+
+Key as AppName Value as SampleApp
+
+Load balancer: uncheck Enable load balancing
+
+------------------------------------------------------------------------------------------------------
+
+7-Create Deployment which pushes code to the webserver:
+
+In the sampleapp click Create Deployment. Enter values like below. Other parameter can can
+be kept default
+
+Deployment group : mygrp
+
+Revision type: My application is stored in Amazon S3
+
+Revision location: s3://select_location_from list
+
+Click Create Deployment to finish
+
+----------------------------------------------------------------------------------------------------------
+
+THOUGH HERE 1 - 7 DEPLOY PARTS IS OVER.
+
+BUT THERE IS PROBLEM. WE SHOULD EXPLICITLY CHANGE IN INDEX. HTML AND S3 TOO. SO TO AVOID THIS SITUATION. WE HAVE "CODE PIPELINE".
+
+
+---------------------------------------------------------------------------------------------------------
+
+CODE PIPLINE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+PRE-REQUESTS:
+
+DO VERSIONING IN S3.
+
+-------------------------------------------------------------------------------------------------------
+
+1. Go to the code pipeline service
+
+2. Choose the bucket and type sampleapp.zip as objectkey in next page
+
+3. Enable cloudwatch events
+
+4. code build - for war or jar file - So simply skip the stage. If we have java file. we can use build.
+
+5. Add deploy stage -> choose an codedeploy
