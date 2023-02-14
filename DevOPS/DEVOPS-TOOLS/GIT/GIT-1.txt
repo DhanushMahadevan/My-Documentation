@@ -48,6 +48,23 @@ BEST PRATICE:
 12. git branch -d dev (Cause, we should delete the branch after the merge from dev. we don't nolonger)
 
 
+TO AVOID UPDATE NON-FASTFORWARD ERROE WHILE PUSHING:
+
+1. mkdir git && cd git && git init
+2. git remote -v
+3. git remote add code https://github.com/DhanushMahadevan/learning-website.git
+4. git remote -v
+5. git fetch
+6. git fetch code master
+7. git log
+8. git pull code master
+9. git log
+10.history | tail
+11.vim  index.html
+12.git commit -am "changes made"
+13.git push code master
+
+
 PRE-REQUESTS:
 
 1.*****STOP THE INSTANCE DON'T DO TERMINATE THE INSTANCE,

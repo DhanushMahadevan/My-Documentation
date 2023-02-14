@@ -35,7 +35,7 @@ configuring. also called CodeDeploy agent. Second EC2 machine is supposed to use
 developer where the codes are programmed. The names of the resources in the experiment
 are arbitrary and may name the resources your own.
 
-1. Create 2 IAM Roles for EC2-S3 (PROD MACHINE) & EC2-CodeDeploy access( we will configure in code deploy applcation likewise, lamba function(ec2-lamba)).
+1. Create 2 IAM Roles for EC2-S3 (PROD MACHINE) & EC2-CodeDeploy access( we will create a role and configure in code deploy applcation likewise other cases servcies in aws, lamba function(ec2-lamba)).
 
 NOTE: WE CAN CREATE EC2-CODEPIPELINE role here. But we have option in code pipeline service.(It is our choose to create, we will either create role and attach to the code pipeline or create a new role code -pipeline there)
 
@@ -57,7 +57,7 @@ machine
 
 2- Create IAM user account for developer
 
-	a-Use the existing desktop/laptop or Launcha new EC2 instance. This is used by the
+	a-Use the existing desktop/laptop or Launch a new EC2 instance. This is used by the
 Developer for the code creation and manual pushing of code to $3 bucket.
 
 	b-Create an IAM user and assign programming access. He should be given
@@ -86,10 +86,10 @@ during the process.
 yum update
 # yum install ruby-y
 # yum install wget -y
-#wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
-#chmod+x install
+# wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
+# chmod +x install
 #./install auto
-# service codedeploy agent status
+# service codedeploy-agent status
 
 
 4-Create the code from Developer machine
@@ -113,7 +113,7 @@ yaml file:
 version: 0.0
 os: linux
 files:
--source:/ndex.html
+-source:/index.html
  destination: /var/www/html/
 hooks:
  Beforelnstall:
@@ -135,7 +135,7 @@ Scripts:
 cat sampleapp/scripts/httpd_install.sh
 
 #!/bin/bash
-yum install-y httpd
+yum install -y httpd
 
 ------------------------------------------------
 cat sampleapp/scripts/httpd_start.sh
@@ -148,7 +148,7 @@ systemctl enable httpd
 cat sampleapp/scripts/httpd_stop.sh
 
 #!/bin/bash
-systemctl stop httpd I
+systemctl stop httpd 
 systemctl disable httpd
 
 ------------------------------------------------------------------------------------------------------
