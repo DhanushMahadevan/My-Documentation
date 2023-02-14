@@ -48,6 +48,15 @@ BEST PRATICE:
 12. git branch -d dev (Cause, we should delete the branch after the merge from dev. we don't nolonger)
 
 
+TO AVOID FAST-FORWARD REJECTED WHILE PUSHING:
+
+1. git pull docs master
+2. git log (Check same as remote commit)
+3. made some changes 
+4. git add .
+5. git commit -m "" 
+6. git push docs master
+
 PRE-REQUESTS:
 
 1.*****STOP THE INSTANCE DON'T DO TERMINATE THE INSTANCE,
