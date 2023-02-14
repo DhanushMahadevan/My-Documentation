@@ -54,15 +54,13 @@ TO AVOID UPDATE NON-FASTFORWARD ERROE WHILE PUSHING:
 2. git remote -v
 3. git remote add code https://github.com/DhanushMahadevan/learning-website.git
 4. git remote -v
-5. git fetch
-6. git fetch code master
+5. git log
+6. git pull code master
 7. git log
-8. git pull code master
-9. git log
-10.history | tail
-11.vim  index.html
-12.git commit -am "changes made"
-13.git push code master
+8.history | tail
+9.vim  index.html
+10.git commit -am "changes made"
+11.git push code master
 
 
 PRE-REQUESTS:
