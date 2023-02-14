@@ -1,0 +1,7 @@
+creating a Branches in diff ways:
+
+git branch -M <branchname> or git checkout -b <New branch>
+
+switching branches
+
+git switch branchname or git checkout branchname
