@@ -4,6 +4,6 @@ LINUX INFRA FOR USERS.
 
 2.SET INITIAL PASSWD BY ADMIN 
 
-3. GENERATE SSH-KEY FOR THE SPECIFIC USER, should enter when asking file.if we enter other it will return an error
+3. GENERATE SSH-KEY FOR THE SPECIFIC USER, should enter when asking file.if we enter other it will return an error and paste the private-key in server and execute ssh-keygen -y -f private-pem-file
 
 4. FINALLY HANDOVER THE USERNAME,PASSWD AND KEY TO THE USER.
