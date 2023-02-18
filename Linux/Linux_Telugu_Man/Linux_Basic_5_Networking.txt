@@ -50,8 +50,8 @@ if any fails that either be firewall or or internet speed(packets are dropped)
 7.netstat -a 
 - which we can see the all the listening ports.
 
-* netstat -a | grep -i LISTENING 
-
+* netstat -a | grep -i LISTENING  or netstat  -anptl | grep -i LISTENING
+  
 IMPORTANT TO REMEMBER WHILE PERFROMING WEB DEPLOY:
 ------------------------------
 watch -n 1 netstat -a | grep -i LISTENING
