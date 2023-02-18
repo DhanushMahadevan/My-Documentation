@@ -1,0 +1,10 @@
+0. create a file and git add .
+1. git stash - snapshot -temporary storage - it reflects both master a - executed in feature branch
+2. git stash list 
+3.  git stash apply 0(stash@) - remind the same executed in master branch 
+4. git stash pop - retrieve and delete stash
+
+Scenario:
+
+whiling switching branches, when not added to the staging area
+

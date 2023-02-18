@@ -113,20 +113,21 @@ yaml file:
 version: 0.0
 os: linux
 files:
--source:/index.html
- destination: /var/www/html/
+  - source: /index.html
+    destination: /var/www/html/
 hooks:
- Beforelnstall:
- -location: scripts/httpd_install.sh
-  timeout: 300
-  runas: root
- -location: scripts/httpd_start.sh
-  timeout: 300
-  runas: root
-ApplicationStop:
- -location: scripts/httpd stop.sh
-  timeout: 300
-  runas: root
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
+
 
 --------------------------------------------------------------------------------------------------
 
@@ -160,12 +161,12 @@ systemctl disable httpd
 	b-Change directory to sampleapp developer machine and create a codedeploy application.
 execute the command below.
 
-#aws deploy create-application -application-name sampleapp
+#aws deploy create-application --application-name sampleapp
 
 	c-Now upload the code to $3 by the executing the command below. Directory of execution
 is important.
 
-#aws deploy push --application-name sampleapp -s3-location s3://gir-sampleapp/sampleapp.zip
+#aws deploy push --application-name sampleapp --s3-location s3://gir-sampleapp/sampleapp.zip
 
 	d- Now browse the s3 bucket to see that sampleapp.zip is present.
 
