@@ -1,0 +1,64 @@
+Jenkins part-2:
+
+Usermgmt in jenkins & deploy in jenkins:
+
+Interview :
+
+What's the security policy jenkins?
+
+Plugin: role based authorization strategy(mostly used plugin)
+
+Note:
+When we installed role baes authorization strategy, the configure global security option have new one that is role-based strategy. In security option, Manage and assign roles added as new one.
+
+USER MANAGEMENT :
+
+Steps(Role based authorization strategy):
+
+1. Install the plugin.
+
+2. Create users in jenkins
+
+3. To set permission, Manage roles(Global role{Organization all employee with read permission} & item role{dev,test roles}) 
+
+4. pattern in item role as dev.*(full access) and tester as test.*(full access).
+
+5. save
+
+6. Assign role to the users for both global and item
+
+
+-----------------------------------------------------
+
+Deployment:
+
+1.INSTALL TOMCAT(8080)(java based java servlet) by using tomcat offical site
+
+2. wget the link tar file and move to  the opt
+
+BASIC FILE DIR IN LINUX:
+
+var- apt yum pkgs
+
+opt - wget curl(addon pkgs)
+
+3. To change the tomcat port number (conf->server.xml).But we change the port number in jenkins.
+
+4. In Jenkins, /etc/jenkins(redhat) or /etc/default/jenkins(debian)
+
+5. vi jenkins-> http_port=8080 as 9090.
+
+6. service jenkins stop & service jenkins start
+
+7. tomcat:8080 and jenkins:9090(copy and paste public ip in the browser)
+
+8. Install deploy to the container plugin in jenkins
+
+9. create users in tomcat get xml lines from internet and paste tomcat-users.xml file.
+
+10. shutdown.sh and startup.sh   
+
+---------------------------------------------------
+
+
+    
