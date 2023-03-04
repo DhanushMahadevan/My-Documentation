@@ -1,0 +1,129 @@
+DOCKER-1:
+
+TASK: MICRO SERVICES AND MONOLITHIC SERVICE
+
+Interview: Docker cmds.
+
+Pre-requests: Hypervisor and minimum 15gb for ebs.
+
+Hypervisor(vmware workstation) - It is used to create a Virtual Machine like GuestOS.
+
+Container(isolated env) -- terminology.
+
+Own definition:
+
+Instead of creating virtual machine, we can create containers in a one virtual machine.
+
+Docker is used to running our application, Instead of worring about our dependencies and libraries based on what we have a kernel.
+
+
+Interesting fact:
+
+we can run the container without pulling the img. But Mention the img along with tag if latest doesn't exist. It pulls automatically  from dockerhub
+
+Installation: docker Engine.
+
+kernel --> Interacts with hardware
+
+procs:
+ less utilization,size and bootup time.
+
+VM cons:
+ high utilization,size and bootup time.
+ 
+
+----------------------------------------------
+
+Docker Components:
+1. DockerImage (AMI)
+2. DockerContainer (isolated env in a instance)
+3. DockerHub
+4. DockerFile (instruction to create a img)
+
+Docker Installation:
+
+kitematic (For win or Mac)
+
+--------------------------------------------------
+Steps:
+
+1. Login in a instance.
+2. Install docker.io for installing docker.
+
+Note:
+
+After pulling the image which shows created as 11 days ago that means that image is changed by author of the image in dockerhub. It doesn't mean of the created in our local machine.
+
+* We can create n number of  containers from a img.
+
+----------------------------------------------------
+
+cmds:
+
+1. docker pull <img:tag>
+
+2. docker images or docker image ls
+
+3. docker ps
+
+4. docker run -i(interactive)t(terminal)d(deattached which means run in background) --name webserver -p (port-forwarding) "7070:80" <img-id>
+
+5. docker exec -it <container-id> /bin/bash or bash 
+
+6. docker ps -a (which shows stoped containers also)
+
+7. docker ps (running container)
+
+8. To delete the container:
+
+ i). First we must stop the container - docker stop <container-id>
+ii). Second we delete the container - docker rm <container-id>
+Alternative ways to delete the container - docker rm -f(forcefully) <container-id> 
+
+9. To delete the img:
+
+docker rmi -f <img-id:tag>
+
+10. docker inspect <con id/name> - info about the container which returns in json format. 
+
+11. docker logs <con id/name>
+
+12. docker stats <con id/name> or docker stats
+
+13. docker top <con id/name>    
+
+14. To convert container to img:
+	docker commit <con-id/name> <desiredimg-name>:<desiredtag>
+	eg. docker commit af myimage:v1.0
+
+---------------------------------------------------
+Sharing the image to another:
+
+2 ways: (dockerhub or scp)
+
+1. To share locally we must save the docker img as file:
+
+Old fashion with tar:
+docker save -o /usr/local/<desired-img-name>.tar <img-name:tag> which is executed in local machine.After that we do scp to share another.
+
+or
+
+New fashion without tar:
+docker image save <imgid> -o <desirednameforfilename>
+output:
+ls -> which shows the filename.
+
+After scp we load the file in remote or another machine:
+
+docker load -i <img-name>
+
+2. To dockerhub:
+
+Pre-requests:
+
+Either create a repo in dockerhub or while push it create what we have named it .
+
+cmds flow:
+docker login
+docker tag imag:v1.0 dockerhubusername/repo-name
+docker push  dockerhubusername/repo-name

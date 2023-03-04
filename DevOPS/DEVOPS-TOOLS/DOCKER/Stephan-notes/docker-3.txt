@@ -1,0 +1,74 @@
+Image to file:
+
+1.docker image save <imgid> -o <desirednameforfilename>
+output:
+ls -> which shows the filename
+
+2. docker rmi <image-id or name>
+
+3. docker image tag <img-id> ubuntu:latest
+
+4. docker image prune ->untagged or unused image will be  deleted
+
+cmds:
+
+
+    2  uname -a
+    3  clear
+    4  docker -version
+    5  docker --version
+    6  ifconfig | grep inet
+    7  docker images 
+    8  docker ps
+    9  docker ps -a
+   10  docker ps --help | grep -a
+   11  clear
+   12  docker image --help
+   13  docker image ls
+   14  docker pull ubuntu
+   15  docekr image ls
+   16  docker image ls
+   17  docker image save 74f2 -o ubuntu
+   18  docker image ls
+   19  ls
+   20  docker image ls
+   21  docker rmi ubuntu
+   22  ls
+   23  history
+   24  ll
+   25  ls -la
+   26  less ubuntu 
+   27  clear
+   28  docker rmi --help
+   29  clear
+   30  docker image ls
+   31  docker ps
+   32  clear
+   33  docker pull httpd
+   34  docker image ls
+   35  dockre image save b3 -o apache
+   36  docker image save b3 -o apache
+   37  ls
+   38  docker run -itd httpd
+   39  docker ps -a
+   40  docker rmi httpd
+   41  docker rmi -f httpd
+   42  docker ps -a
+   43  docker ps 
+   44  clear
+   45  ls
+   46  docker load -i ubuntu 
+   47  ls
+   48  docker image ls
+   49  docker image tag b30 ubuntu:latest
+   50  docker image ls
+   51  docker image tag b30 ubuntu:lates
+   52  docker image ls
+   53  docker rmi ubuntu
+   54  docker image ls
+   55  ls
+   56  docker image prune
+   57  docker image ls
+   58  clear
+   59  history > cmd.txt
+

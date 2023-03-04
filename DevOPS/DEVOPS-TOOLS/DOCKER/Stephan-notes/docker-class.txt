@@ -1,0 +1,8 @@
+
+create a repo in dockerhub
+
+create tag [docker tag img-id dhanushmahadevan/myami:latest]
+
+push to the remote repo to the dockerhub :
+
+docker push dhanushmahadevan/myami:latest
