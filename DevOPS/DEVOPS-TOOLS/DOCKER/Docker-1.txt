@@ -48,7 +48,7 @@ kitematic (For win or Mac)
 Steps:
 
 1. Login in a instance.
-2. Install docker.io for installing docker.
+2. Install docker.io for installing debian docker for redhat install docker .
 
 Note:
 
