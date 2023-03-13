@@ -70,7 +70,7 @@ cmds:
 
 5. docker exec -it <container-id> /bin/bash or bash 
 
-6. docker ps -a (which shows stoped containers also)
+6. docker ps -a (which shows running & stopped containers also)
 
 7. docker ps (running container)
 

@@ -52,7 +52,7 @@ AND ADD A GPGKEY.
 gpgkey:
 
 Scenario: 
-Every software updated in weekly or monthly. So this gpgkey added the lastest version where we can get from jenkins installation official page.
+Every software updated in weekly or monthly. So this gpgkey added the latest version where we can get from jenkins installation official page.
 
 3. After successfully installed jenkins. 
 

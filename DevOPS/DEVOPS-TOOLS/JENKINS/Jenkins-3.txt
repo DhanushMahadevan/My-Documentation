@@ -1,0 +1,7 @@
+JENKINS PART -3
+
+MASTER SLAVE CONFIG:
+
+Agent is connecting b/w master and slave machines.
+
+For more secure(public key and private key)
