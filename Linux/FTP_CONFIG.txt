@@ -1,0 +1,101 @@
+FTP CONFIG( concs: It shares only files):
+
+port number: 20(data transfer) ,21(connection)
+
+PRE-REQUESTS:
+
+1. MINIMUM 2 MACHINES TO BE TESTED CLIENT(FTP PKG) AND SERVER(VSFTP)
+
+2. MAKE SURE PINGING EACH OTHER MACHINES.
+
+3 . Sg - all tcp - if not - we can't see pub file in /var/ftp it is routed as dynamic port
+
+4. If any changes in config file . And do restart the vsftpd service
+
+TWO TYPES:
+
+ANONYMOUS AND NORMAL USER
+
+
+ANONYMOUS:(Cons: we should only view in first parent dir)
+----------------------------------
+STEPS:
+
+1. Start & enable the vsftpd in server
+
+2. Check the config file in anonymous_enable to Yes server. ftp <server-ip> in the client
+Username and password as anonymous in client
+
+3. Download winscp in windows and type ftp protocol.
+
+----------------------------------------------------------------------------------------------------
+
+If  upload to the root from anonymous users:
+
+1. we can't upload to the root by default, Cause we have selinux in the vsftpd pkg.Check the config file in anon_upload to Yes server. So enable the boolean value.
+
+2.getsebool -a | grep ftp 
+
+3. setsebool -P ftpd_anon_write {on or 1}
+
+4. getenforce --> to enforcing the policy of bool function in ftp
+
+5.chown ftp:ftp /var/pub -R 
+
+6. now we can copy anonymous from winscp or filezilla to the server or In linux put <filename> in ftp prompt to upload the files to server
+
+--------------------------------------------------------------------------------------
+
+If we create a dir from client to server:
+
+1. we can't create a dir to the root by default, Cause we have selinux in th vsftpd pkg.Check the config file in anon_mkdir_write_enable to Yes server.
+
+2. Now we can create a dir from client to server
+
+
+
+-----------------------------------------------------------------------------------------
+
+NORMAL USER A/C:
+
+1. Make sure disable anonymous priviledges in config file.Check the config file as local_enable,write_enable=yes
+
+2. If we need log for ftp . xferlog_enable=yes
+
+3. Note, inside vsftpd dir , ftp_users which defines the listed users are not accessed in ftp
+
+4. create users and files from server .do ftp <ip> and use username as created user and passwd instead of anonymous in client machine
+
+
+5. SCENARIO:
+
+What if i will face the block 1000 users for ftp server access
+
+2 WAYS:
+
+i). Edit ftp_users in vsftpd dir (Rarely)
+
+ii). Edit config file and add the line as userlist_deny=NO. cause userlist_deny=yes(default)
+
+* cat user_list in vsftpd dir
+
+The above 2 and 3 steps defines the user_list contains allow user in ftp server
+-------------------------------------------------------------------------------------------------------
+
+chroot:(Securing the server by editing the config files as mentioned below)
+
+Scenario:
+Without chroot, we can access file permission of other users as "r" which means we can download the file with read permission of other users like /etc for etc...
+
+So we can use chroot, to restrict the above scenario.
+
+
+STEPS:
+
+1. Edit the config and uncomment the chroot_local_users,chroot_list_enable=YES
+
+2. And add the line allow_writeable_chroot=yes 
+
+3. ftp <server-ip> on client 
+
+4. now check cd /etc -> output: failed to change dir

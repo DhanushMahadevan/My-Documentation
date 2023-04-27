@@ -1,0 +1,47 @@
+samba server:
+
+Ports:
+
+SMB - server msg Block - 139
+NMB - NetBIOS msg Block - 445 
+
+
+STEP:
+
+1. Install samba on server
+
+2. Edit in /etc/samba/smb.conf file:
+
+[Dhanush-samba]
+        comment = test samba service
+        path = /home/ec2-user/share
+        read only = no
+browsable = yes
+writeable = yes
+valid users = dhanush
+
+[devdocs]
+        comment = Development documentation
+        read only = no
+        available = yes
+        path = /devdocs
+        public = yes
+        valid users = dhanush
+        write list = dhanush
+        writable = yes
+        browseable = yes
+
+NOte: The [devdocs] -> should be the same as shared dir. Otherwise it will return an error.
+
+3. Check pinging from client.
+
+4. create a user for above valid user conf
+
+5. smbpasswd -a dhanush
+
+6. create dir what config in path.
+
+7. In client : install samba-client 
+
+8. smbclient //<server-ip>/devdocs -U <username>
+
