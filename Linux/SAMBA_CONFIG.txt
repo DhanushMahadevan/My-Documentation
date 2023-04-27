@@ -39,6 +39,8 @@ NOte: The [devdocs] -> should be the same as shared dir. Otherwise it will retur
 
 5. smbpasswd -a dhanush
 
+client:
+
 6. create dir what config in path.
 
 7. In client : install samba-client 
