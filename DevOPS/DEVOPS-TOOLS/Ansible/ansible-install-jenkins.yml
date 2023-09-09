@@ -1,0 +1,22 @@
+- hosts: jenkins-server
+  remote_user: ec2-user
+  become: yes
+  tasks:
+  - name: Add Jenkins repository
+    yum_repository:
+     name: jenkins
+     description: Jenkins YUM repo
+     baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+     gpgkey: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+  - name: Installing Java and Jenkins
+    yum:
+     name: "{{item}}"
+     state: present
+    loop:
+     - java
+     - jenkins
+  - name: Service Jenkins started
+    service:
+     name: jenkins
+     state: started
+     enabled: yes
