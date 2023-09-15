@@ -1,0 +1,8 @@
+---
+# tasks file for Setuping the k8s on worker node
+
+- include_tasks: docker.yml
+
+- include_tasks: k8s.yml
+
+

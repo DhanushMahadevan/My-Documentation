@@ -1,0 +1,41 @@
+---
+- name: Update package list
+  apt:
+    update_cache: yes
+
+- name: Offing Swap Memory
+  shell:
+    cmd: swapoff -a
+
+- name: Install required packages
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+    state: present
+
+- name: Add Kubernetes apt key
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+
+- name: Add Kubernetes apt repository
+  apt_repository:
+    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Install kubelet, kubeadm, and kubectl
+  apt:
+    name:
+      - kubelet
+      - kubeadm
+      - kubectl
+    state: present
+
+- name: Start and enable kubelet service
+  service:
+    name: kubelet
+    state: started
+    enabled: yes
+
