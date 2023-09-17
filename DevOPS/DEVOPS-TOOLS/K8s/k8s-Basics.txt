@@ -1,0 +1,43 @@
+Kubernetes
+------------
+
+Docker vs k8s:
+----------------
+1. Docker - container platform
+
+Cons:
+
+* Ephemeral(Short life, container consumes cpu so it will die for cpu utilize, so all container will die by process id) - depended-Single host
+
+* No Self healing
+
+* No Autoscaling
+
+* No LoadBalancing
+
+* No Enterprise Support Level, Unless using Docker swarm.
+
+[Note: Enterprise Support level Standards (prod server) are ,
+
+-> Load Balancer
+-> Firewall
+-> Autoscale
+-> Self Healing
+-> API Gateway ].
+
+2. K8s - container orchestration tool - By default k8s is a Cluster(Group of Nodes with master/ node architecture like jenkins)
+
+Pros:
+
+[ It resolves above cons of Docker, They are,]
+
+* Cluster
+
+* ReplicaSet - HPA(Autoscaling)
+
+* Auto Healing - k8s control the pod/container and fix the damaged pod/container 
+
+* Enterprise Nature.
+
+*  Kube-proxy(Round Robin) load balancing and Advanced Ingress Controller for load balancing.
+

@@ -1,0 +1,28 @@
+K8s Architecture:
+--------------------------------
+Control plane or Master node:
+
+Five Components:
+
+1. Api Server(Manages the user request and respond & Like Decision Maker) - heart of k8s-Decided the information from user access the pods and return the request to the world.
+
+2. Etcd - Stored key value pairs to all the cluster info. 
+
+3. Scheduler(work for API server decision only) - Receiving the info from API server and  schedules the pods or resources in k8s. Api server instruct to the Schduler Like go and sheduler the pod to the node 4, It schedules it.
+
+4. Controller Managers - Manages the inbuilt Controllers and ensure Controllers are running like ensuring ReplicaSet , replicas are running or not.
+
+5. Cloud Controller Managers - EKS,AKS,GKE for cloud load balancers and storages.
+
+
+
+
+Data plane or worker node:
+
+Three components:
+
+1. Kubelet - Responsible for ensure  pods is running let them know to api server in Control plane and healing them.
+
+2. Kube proxy - provides the Networking,genearting ip address,Default Load Balancing(Round Robin)
+
+3. Container Runtime - provides platform to run the Containers.(DockerStirm,containerd)
