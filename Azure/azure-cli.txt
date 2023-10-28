@@ -1,0 +1,30 @@
+AZURE CLI:
+
+Install Cli and Dependency Module seperately.
+
+cmds:
+
+syntax:
+
+az <resource> <action> <parameters> <variables>
+
+
+0. az login --tenant 'a1bdd5cb-45ec-4fe7-ae4bbc14477e8bd2'
+
+1. az login --use-device-code
+
+2. az configure - changes for table format , data collection for telemetry disable or change the telemetry settings and so on.
+
+3. az cloud list 
+
+4. az group list or [-- output or -o tsv]
+
+az group list
+
+To Create a Resource Group:
+
+5. az group create (--name or -n) <resource-grp-name> (--location or -l) eastus
+
+To delete a RG:
+
+6.  az group delete --resource-group or -n <rg-name> 
