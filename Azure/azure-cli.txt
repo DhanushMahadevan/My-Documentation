@@ -9,7 +9,7 @@ syntax:
 az <resource> <action> <parameters> <variables>
 
 
-0. az login --tenant 'a1bdd5cb-45ec-4fe7-ae4bbc14477e8bd2'
+0. az login --tenant '<tenant-id>'
 
 1. az login --use-device-code
 
