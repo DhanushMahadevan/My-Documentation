@@ -1,0 +1,69 @@
+Observability Platform:
+ It's collect, store, manage, organize and transforms data into actionable, real-time illustrations of systems that correlate to business goals.
+
+------------------------------------------------------------------------------------
+
+Instrumenting services with agents:
+ * Observability platforms ingest data from our services with agents. Agents are integrated into a service through a process called instrumentation.
+ * An Agent is typically a file or few lines of code that automatically collects data on your service to the observability platform.
+
+------------------------------------------------------------------------------------
+
+Instrumenting Telemetry data in Newrelic (Layers - Agents - Events - Instrumentation):
+
+1. UI/UX Layer - Browser and Mobile agent - PageViews and Interactions - pageviews, Ajax calls, JavaScript errors and mobile interactions. This event generate transactions at the service layer
+
+2. Service Layer - APM agent - Transactions - Transactions and the errors with detailed timings with the app code.
+
+3. Infra Layer - Infra agent - Samples & Flex Integration - System, process,network, on-host integrations and so on.
+
+
+--------------------------------------------------------------------------------------
+
+APM AGENT:
+
+ * It Supports 8 languages : C, Java, PHP, Python, Golang, .Net, Node JS and Ruby . However, We can ingest any apps with help of OpenTelemetry that can be instrumented using OTel agent. 
+
+ * Auto instrumentation.
+
+ * Built in Distributed Tracing
+ 
+ * It is identify our transactions with TraceIDs so that we can follow traces end to end from here.
+ 
+ * We can capture loads of metrics directly from the app. we can also capture each event which is a transaction that our app execute.
+ 
+ * It is customizable if we want to add a new field or new events a few lines of code  
+  
+
+------------------------------------------------------------------------------------
+
+BROWSER AGENT:
+
+ For Real-time user experience 
+
+ * Runs in End user's browser
+ 
+ * Deploy with code snippet or Automatically via APM
+
+ * Supports Core Web Vitals and Single Page Applications (SPA)
+ 
+ * Extensible with customisations (e.g for business data)
+
+
+------------------------------------------------------------------------------------
+
+INFRASTRUCTURE AGENT:
+ 
+ * Monitoring the host resource and process metrics.
+ * Log Forwarding and on-host integration data.
+ * Also availble for docker & k8s.
+ * Manageable via ansible, chef, puppet, etc
+
+
+----------------------------------------------------------------------------------
+
+ON-HOST INTEGRATION:
+
+ If we don't have access to the code. But we still want to monitor that is a simple yaml file presented in /etc/newrelic-infra.yml
+
+
