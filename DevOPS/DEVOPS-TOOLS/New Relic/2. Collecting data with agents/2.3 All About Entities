@@ -1,0 +1,32 @@
+Entities:
+
+ * An Entity is anything that reports data to New relic or contains data New Relic has access to.
+ * Identified ny Unique ID (usually entityGuid) and Workloads (workloadGuid)
+ * New Relic keeps track of relationship b/w entities
+
+Workloads (From the business prespective, we manage the all new relic entities are group together based on distant businesses):
+
+ * It is logical group of entities that could be an applications, hosts, cloud-services and even dashboards that we want to put together into a single view. That view is called workload.
+
+Finding and Understanding entities:
+
+ * From Explorer: See metadata and tags 
+ 
+ * Viewing entity relationships:
+  
+    1. Related entities UI (Presented inside the each Entity in New Relic)
+ 
+    2. Service maps (View of entity relationships in a Each entity and Also Click full map in related entites, It Directs to Service maps)
+
+    3. Distributed traces (Let you follow the path of a transcation from end to end, possibly Starting with the browser or may be with one of our services on the backend. It is another place to see the realtionship b/w entities)
+
+    4. Query with NerdGraph API (Query entities as well as relationships. 2 ways to define relationship b/w entites - {Tagging them & }
+
+ * Grouping entities:
+  
+    1. Tags
+  
+    2. Workloads
+
+
+
