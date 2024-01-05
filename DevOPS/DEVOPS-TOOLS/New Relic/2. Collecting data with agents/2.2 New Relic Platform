@@ -1,0 +1,37 @@
+##################################################### NEW RELIC FULL CYCLE PLATFORM #################################################
+
+Service Layer(APM):
+ * Functioning at the middle layer or service layer of the stack.
+
+ * It enables Developers to monitor and troubleshoot the performance of their applications in real time.
+
+ * APM helps to view the deep visibility init our (App code, Db queris and External services calls)
+
+-------------------------------------------------------------------------------------------------------
+
+Infra Layer( Infra resource monitoring, K8s with pixie, Log Management and NPM{Network performance monitoring})
+
+ * Functioning at the Bottom layer or Infra layer of the stack.
+
+ * It enables Devops Team to monitor the health and performance of their service containers and cloud infra. Eg. Tracking CPU and memory, network trafic, disk space utilization. 
+
+ * When we add k8s with pixie. we can see detailed infor about the state of cluster, nodes and Pixie gives us deeper visibility our appsin the cluster by quering the kernel directly using EBPF insights into our apps without the need to fully instrument them with APM.
+
+ * NPM - Allows the analyze the performance of our routers,switches and other networking devices as well as build out visual network topology Which is identify the problems with in different locations that might be affecting users in different regions.
+
+
+-------------------------------------------------------------------------------------------------------
+
+UI/UX Layer(Browser, Mobile and Sythetics monitoring):
+
+ * Functioning at the Top layer of the stack which is our user experience.
+ 
+ * We have 3 products(Browser, Mobile, Sythetics) that will give us a deeper understanding of our users. For real-time user monitoring
+
+   1. Browser Monitoring - Collect data from the navigation times in all end users browsers and send that data directly to New Relic. JavaScript erros and user interactios too.
+
+   2. Mobile Monitoring - Send telemetry directly from the end user's mobile app to new relic. Allows the analyze the app performance on the client device. Eg. How many users upgraded to version 3 to your mobile app?.
+   
+  3. Synthetics Monitoring - Gives Real time solutions exactly what our users are doing and waht the experience is like for them. Allows us to proactively make sure that all our services are running as they should and notify us if there's a problem before our users find out. Developers can create scripted tests that simukate the complex user journeys and user interactions with their applications from different locations and different devices.
+
+-----------------------------------------------------------------------------------------------------------

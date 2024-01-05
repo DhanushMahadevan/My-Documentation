@@ -1,17 +1,20 @@
 Observability Platform:
+
  It's collect, store, manage, organize and transforms data into actionable, real-time illustrations of systems that correlate to business goals.
 
 ------------------------------------------------------------------------------------
 
 Instrumenting services with agents:
+
  * Observability platforms ingest data from our services with agents. Agents are integrated into a service through a process called instrumentation.
- * An Agent is typically a file or few lines of code that automatically collects data on your service to the observability platform.
+
+ * An Agent is typically a file or few lines of code that automatically collects data on your service and send it to the observability platform.
 
 ------------------------------------------------------------------------------------
 
 Instrumenting Telemetry data in Newrelic (Layers - Agents - Events - Instrumentation):
 
-1. UI/UX Layer - Browser and Mobile agent - PageViews and Interactions - pageviews, Ajax calls, JavaScript errors and mobile interactions. This event generate transactions at the service layer
+1. UI/UX Layer - Browser and Mobile agent - PageViews and Interactions - pageviews, Ajax calls, JavaScript errors and mobile interactions. (This event generate transactions at the service layer)
 
 2. Service Layer - APM agent - Transactions - Transactions and the errors with detailed timings with the app code.
 
@@ -64,6 +67,26 @@ INFRASTRUCTURE AGENT:
 
 ON-HOST INTEGRATION:
 
- If we don't have access to the code. But we still want to monitor that is a simple yaml file presented in /etc/newrelic-infra.yml
+ If we don't have access to the code. But we still want to monitor that is a simple yaml file presented in the /etc dir while we're installing the infra agent.
+ * Can create your own integrations using SDK or Flex
 
 
+----------------------------------------------------------------------------------
+
+CLOUD INTEGRATIONS:
+ * AWS, GCP, Azure
+ * Configurable polling intervals
+ * Most Key Services are supported
+
+
+----------------------------------------------------------------------------------
+
+Network Monitoring
+
+ * Monitoring for SNMP(Simple Network management protocol - used to monitor the network) and Network Flow devices.
+ * Support for SNMP v1,v2c,v3.
+ * Configurable polling frequency.
+ * Targets devices across specific CIDR IP range
+
+
+----------------------------------------------------------------------------------
