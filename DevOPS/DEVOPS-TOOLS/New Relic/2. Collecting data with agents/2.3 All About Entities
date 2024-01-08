@@ -20,13 +20,13 @@ Finding and Understanding entities:
 
     3. Distributed traces (Let you follow the path of a transcation from end to end, possibly Starting with the browser or may be with one of our services on the backend. It is another place to see the realtionship b/w entities)
 
-    4. Query with NerdGraph API (Query entities as well as relationships. 2 ways to define relationship b/w entites - {Tagging them & }
+    4. Query with NerdGraph API (Query entities as well as relationships. 2 ways to define relationship b/w entites - {Tagging them &  Workload})
 
  * Grouping entities:
   
-    1. Tags
+    1. Tags ( A Category and a value like team equals devops or env=prod or tier = services , To view the tags by searching the group of entities in FILTER BAR SEARCH in top of UI.)
   
-    2. Workloads
+    2. Workloads (Logical grouping the bunch entities like front-end entities,back-end entities services, infra entities and "WORKLOAD ALSO AN ENTITY")
 
 
 
