@@ -1,0 +1,13 @@
+NAT
+
+create public (igw) & private instances (nat) with distinct route table 
+
+Note :while creating nat, should select public subnet and connectivity as public and to attach in private route table.
+
+Refer this link for basic of NAT : https://cloudbuild.co.uk/azure-nat-gateway-explained/
+
+
+AZURE:
+
+-----------------------------------
+We don't map public subnet in  nat gatewat as aws

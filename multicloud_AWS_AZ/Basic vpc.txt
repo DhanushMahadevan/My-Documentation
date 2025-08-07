@@ -1,0 +1,40 @@
+VPC: 
+
+subnet,route tables, internet gateways, elastic ip,NACL,SECURITY GROUP,ENDPOINTS,TRANSIT GATEWAY
+/16 - /28
+
+while creating a vpc, by default... eni, route table & acl will create
+
+.0 --> network id
+.1 --> reserved by aws for aws vpc router
+.2 --> reserved by aws dns server
+.3 --> for future use
+.4 --> we can instance from this octent
+.255 -->  Network broadcast address. We do not support broadcast in a VPC, therefore we reserve this address.
+
+
+Q/A:
+
+can we change the security group of an ec2 instance ?
+
+Yes, it is possible to change the security group of an EC2 instance, even while it's running
+
+------------------------
+Setup VPC:
+
+1. create vpc 
+2. create subnet (public & private),route-table(public & private), associate subnet (public & private),internet gateway (public subnet)
+-----------------------------
+AZURE :
+
+Note :
+ * Likewise, create as aws . But there is no igw as aws. Instead there is option in route called internet we can map as 0.0.0.0/0 in public explicitly.
+
+ *  By default, there is no local route in route table as aws 
+
+
+
+
+
+
+
