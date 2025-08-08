@@ -10,4 +10,4 @@ Refer this link for basic of NAT : https://cloudbuild.co.uk/azure-nat-gateway-ex
 AZURE:
 
 -----------------------------------
-We don't map public subnet in  nat gatewat as aws
+Important Note : We don't map public subnet in  nat gatewat as aws

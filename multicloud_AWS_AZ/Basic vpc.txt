@@ -25,13 +25,13 @@ Setup VPC:
 1. create vpc 
 2. create subnet (public & private),route-table(public & private), associate subnet (public & private),internet gateway (public subnet)
 -----------------------------
-AZURE :
+AZURE (WEST US use this region while creating , the reason of free tier resources are presented there most of cases  and also create route table that region) :
 
 Note :
- * Likewise, create as aws . But there is no igw as aws. Instead there is option in route called internet we can map as 0.0.0.0/0 in public explicitly.
+ * Likewise, create as aws . But there is no igw as aws. Instead there is option in route called internet we should  map as 0.0.0.0/0 in public explicitly.
 
  *  By default, there is no local route in route table as aws 
-
+ * Route table is region specific 
 
 
 
